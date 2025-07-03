@@ -15,7 +15,7 @@ use Firefly\FilamentBlog\Models\User;
 
 return [
     'tables' => [
-        'prefix' => '', // prefix for all blog tables
+        'prefix' => 'fblog_', // prefix for all blog tables
     ],
     'route' => [
         'prefix' => 'blogs',
@@ -25,7 +25,7 @@ return [
         //            'url' => env('APP_URL'),
         //        ],
         'login' => [
-            'name' => 'filamentblog.post.login',
+            'name' => 'filament.admin.auth.login',
         ],
     ],
     'user' => [

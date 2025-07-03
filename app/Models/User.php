@@ -7,12 +7,14 @@ use Firefly\FilamentBlog\Traits\HasBlog;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use MixCode\FilamentMulti2fa\Enums\TwoFactorAuthType;
+use MixCode\FilamentMulti2fa\Traits\UsingTwoFA;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable, HasBlog, HasRoles;
+    use HasFactory, Notifiable, HasBlog, HasRoles, UsingTwoFA;
 
     /**
      * The attributes that are mass assignable.
@@ -23,6 +25,22 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+    ];
+
+    protected $guarded = [
+        'two_factor_type',
+        'two_factor_secret',
+        'two_factor_recovery_codes',
+        'two_factor_sent_at',
+        'two_factor_expires_at',
+        'two_factor_confirmed_at',
+    ];
+
+    protected $casts = [
+        'two_factor_type' => TwoFactorAuthType::class,
+        'two_factor_sent_at' => 'datetime',
+        'two_factor_expires_at' => 'datetime',
+        'two_factor_confirmed_at' => 'datetime',
     ];
 
     /**
