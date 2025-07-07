@@ -3,10 +3,10 @@
 namespace App\Policies;
 
 use App\Models\User;
-use App\Models\ShareSnippet;
+use App\Models\WebSetting;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class ShareSnippetPolicy
+class WebSettingPolicy
 {
     use HandlesAuthorization;
 
@@ -15,15 +15,15 @@ class ShareSnippetPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->can('view_any_share::snippet');
+        return $user->can('view_any_web::setting');
     }
 
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, ShareSnippet $shareSnippet): bool
+    public function view(User $user, WebSetting $webSetting): bool
     {
-        return $user->can('view_share::snippet');
+        return $user->can('view_web::setting');
     }
 
     /**
@@ -31,23 +31,23 @@ class ShareSnippetPolicy
      */
     public function create(User $user): bool
     {
-        return $user->can('create_share::snippet');
+        return $user->can('create_web::setting');
     }
 
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, ShareSnippet $shareSnippet): bool
+    public function update(User $user, WebSetting $webSetting): bool
     {
-        return $user->can('update_share::snippet');
+        return $user->can('update_web::setting');
     }
 
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, ShareSnippet $shareSnippet): bool
+    public function delete(User $user, WebSetting $webSetting): bool
     {
-        return $user->can('delete_share::snippet');
+        return $user->can('delete_web::setting');
     }
 
     /**
@@ -55,15 +55,15 @@ class ShareSnippetPolicy
      */
     public function deleteAny(User $user): bool
     {
-        return $user->can('delete_any_share::snippet');
+        return $user->can('delete_any_web::setting');
     }
 
     /**
      * Determine whether the user can permanently delete.
      */
-    public function forceDelete(User $user, ShareSnippet $shareSnippet): bool
+    public function forceDelete(User $user, WebSetting $webSetting): bool
     {
-        return $user->can('force_delete_share::snippet');
+        return $user->can('force_delete_web::setting');
     }
 
     /**
@@ -71,15 +71,15 @@ class ShareSnippetPolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_share::snippet');
+        return $user->can('force_delete_any_web::setting');
     }
 
     /**
      * Determine whether the user can restore.
      */
-    public function restore(User $user, ShareSnippet $shareSnippet): bool
+    public function restore(User $user, WebSetting $webSetting): bool
     {
-        return $user->can('restore_share::snippet');
+        return $user->can('restore_web::setting');
     }
 
     /**
@@ -87,15 +87,15 @@ class ShareSnippetPolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_share::snippet');
+        return $user->can('restore_any_web::setting');
     }
 
     /**
      * Determine whether the user can replicate.
      */
-    public function replicate(User $user, ShareSnippet $shareSnippet): bool
+    public function replicate(User $user, WebSetting $webSetting): bool
     {
-        return $user->can('replicate_share::snippet');
+        return $user->can('replicate_web::setting');
     }
 
     /**
@@ -103,6 +103,6 @@ class ShareSnippetPolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_share::snippet');
+        return $user->can('reorder_web::setting');
     }
 }

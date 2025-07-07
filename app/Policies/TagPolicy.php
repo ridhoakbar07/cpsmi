@@ -3,7 +3,7 @@
 namespace App\Policies;
 
 use App\Models\User;
-use Firefly\FilamentBlog\Models\Tag;
+use App\Models\Tag;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class TagPolicy

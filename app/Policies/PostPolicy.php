@@ -3,7 +3,7 @@
 namespace App\Policies;
 
 use App\Models\User;
-use Firefly\FilamentBlog\Models\Post;
+use App\Models\Post;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class PostPolicy
@@ -55,7 +55,7 @@ class PostPolicy
      */
     public function deleteAny(User $user): bool
     {
-        return $user->can('{{ DeleteAny }}');
+        return $user->can('delete_any_post');
     }
 
     /**
@@ -71,7 +71,7 @@ class PostPolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('{{ ForceDeleteAny }}');
+        return $user->can('force_delete_any_post');
     }
 
     /**
@@ -87,7 +87,7 @@ class PostPolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('{{ RestoreAny }}');
+        return $user->can('restore_any_post');
     }
 
     /**
@@ -103,6 +103,6 @@ class PostPolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('{{ Reorder }}');
+        return $user->can('reorder_post');
     }
 }

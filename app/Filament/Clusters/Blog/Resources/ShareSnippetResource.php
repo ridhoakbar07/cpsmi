@@ -3,9 +3,9 @@
 namespace App\Filament\Clusters\Blog\Resources;
 
 use App\Filament\Clusters\Blog;
-use App\Filament\Clusters\Blog\Resources\BlogTagResource\Pages;
-use App\Filament\Clusters\Blog\Resources\BlogTagResource\RelationManagers;
-use App\Models\BlogTag;
+use App\Filament\Clusters\Blog\Resources\ShareSnippetResource\Pages;
+use App\Filament\Clusters\Blog\Resources\ShareSnippetResource\RelationManagers;
+use App\Models\ShareSnippet;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -14,31 +14,28 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class BlogTagResource extends Resource
+class ShareSnippetResource extends Resource
 {
-    protected static ?string $model = BlogTag::class;
+    protected static ?string $model = ShareSnippet::class;
 
-    protected static ?string $navigationLabel = 'Tags';
-    protected static ?string $navigationIcon = 'heroicon-o-tag';
-    protected static ?int $navigationSort = 3;
+    protected static ?string $navigationLabel = 'Share Snippets';
+    protected static ?string $navigationIcon = 'heroicon-o-share';
+    protected static ?int $navigationSort = 4;
 
     protected static ?string $cluster = Blog::class;
-
-    public static function getNavigationBadge(): ?string
-    {
-        return static::getModel()::count();
-    }
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
+                Forms\Components\Textarea::make('script_code')
                     ->required()
-                    ->maxLength(50),
-                Forms\Components\TextInput::make('slug')
+                    ->columnSpanFull(),
+                Forms\Components\Textarea::make('html_code')
                     ->required()
-                    ->maxLength(155),
+                    ->columnSpanFull(),
+                Forms\Components\Toggle::make('active')
+                    ->required(),
             ]);
     }
 
@@ -46,10 +43,8 @@ class BlogTagResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
+                Tables\Columns\IconColumn::make('active')
+                    ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -76,7 +71,7 @@ class BlogTagResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageBlogTags::route('/'),
+            'index' => Pages\ManageShareSnippets::route('/'),
         ];
     }
 }

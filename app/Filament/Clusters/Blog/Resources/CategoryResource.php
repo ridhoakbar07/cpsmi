@@ -3,11 +3,12 @@
 namespace App\Filament\Clusters\Blog\Resources;
 
 use App\Filament\Clusters\Blog;
-use App\Filament\Clusters\Blog\Resources\BlogCategoryResource\Pages;
-use App\Filament\Clusters\Blog\Resources\BlogCategoryResource\RelationManagers;
-use App\Models\BlogCategory;
+use App\Filament\Clusters\Blog\Resources\CategoryResource\Pages;
+use App\Filament\Clusters\Blog\Resources\CategoryResource\RelationManagers;
+use App\Models\Category;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
 use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -16,9 +17,9 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
 
-class BlogCategoryResource extends Resource
+class CategoryResource extends Resource
 {
-    protected static ?string $model = BlogCategory::class;
+    protected static ?string $model = Category::class;
 
     protected static ?string $navigationLabel = 'Categories';
     protected static ?string $navigationIcon = 'heroicon-o-squares-2x2';
@@ -36,14 +37,17 @@ class BlogCategoryResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->maxLength(155)
-                    ->live(500)
-                    ->dehydrateStateUsing(fn(string $state): string => ucwords($state))
-                    ->afterStateUpdated(fn(Set $set, ?string $state) => $set('slug', Str::slug($state))),
-                Forms\Components\TextInput::make('slug')
+                    ->live(true)
+                    ->afterStateUpdated(function (Get $get, Set $set, ?string $operation, ?string $old, ?string $state) {
+                        $set('slug', Str::slug($state));
+                    })
+                    ->unique('categories', 'name', null, 'id')
                     ->required()
                     ->maxLength(155),
+                Forms\Components\TextInput::make('slug')
+                    ->unique('categories', 'slug', null, 'id')
+                    ->readOnly()
+                    ->maxLength(255),
             ]);
     }
 
@@ -81,7 +85,7 @@ class BlogCategoryResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageBlogCategories::route('/'),
+            'index' => Pages\ManageCategories::route('/'),
         ];
     }
 }

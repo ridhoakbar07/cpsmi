@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Clusters\Blog\Resources\BlogCategoryResource\Pages;
+namespace App\Filament\Clusters\Blog\Resources\CategoryResource\Pages;
 
-use App\Filament\Clusters\Blog\Resources\BlogCategoryResource;
+use App\Filament\Clusters\Blog\Resources\CategoryResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
 
-class ManageBlogCategories extends ManageRecords
+class ManageCategories extends ManageRecords
 {
-    protected static string $resource = BlogCategoryResource::class;
+    protected static string $resource = CategoryResource::class;
 
     protected static ?string $title = 'Categories';
 

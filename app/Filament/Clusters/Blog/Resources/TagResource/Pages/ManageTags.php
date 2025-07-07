@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Clusters\Blog\Resources\BlogTagResource\Pages;
+namespace App\Filament\Clusters\Blog\Resources\TagResource\Pages;
 
-use App\Filament\Clusters\Blog\Resources\BlogTagResource;
+use App\Filament\Clusters\Blog\Resources\TagResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
 
-class ManageBlogTags extends ManageRecords
+class ManageTags extends ManageRecords
 {
-    protected static string $resource = BlogTagResource::class;
+    protected static string $resource = TagResource::class;
 
     protected static ?string $title = 'Tags';
     

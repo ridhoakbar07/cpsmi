@@ -5,7 +5,7 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
-use Firefly\FilamentBlog\Traits\HasBlog;
+use Firefly\FilamentBlog\Models\Post;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -44,6 +44,8 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail
         'two_factor_sent_at' => 'datetime',
         'two_factor_expires_at' => 'datetime',
         'two_factor_confirmed_at' => 'datetime',
+        'email_verified_at' => 'datetime',
+        'password' => 'hashed',
     ];
 
     /**
@@ -79,4 +81,10 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail
         // your conditional logic here
         return true;
     }
+
+        public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
 }

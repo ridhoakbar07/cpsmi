@@ -12,14 +12,14 @@ return new class () extends Migration {
      */
     public function up()
     {
-        Schema::create('blog_categories', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name', 155)->unique();
             $table->string('slug', 155)->unique();
             $table->timestamps();
         });
 
-        Schema::create('blog_posts', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('slug');
@@ -36,22 +36,22 @@ return new class () extends Migration {
             $table->timestamps();
         });
 
-        Schema::create('blog_category_post', function (Blueprint $table) {
+        Schema::create('category_post', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("post_id")
-                ->constrained('blog_posts')
+            $table->foreignId('post_id')
+                ->constrained('posts')
                 ->cascadeOnDelete();
-            $table->foreignId("category_id")
-                ->constrained('blog_categories')
+            $table->foreignId('category_id')
+                ->constrained('categories')
                 ->cascadeOnDelete();
             $table->timestamps();
         });
 
-        Schema::create('blog_comments', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
             $table->foreignId('post_id')
-                ->constrained( 'blog_posts')
+                ->constrained( 'posts')
                 ->cascadeOnDelete();
             $table->text('comment');
             $table->boolean('approved')->default(false);
@@ -59,25 +59,25 @@ return new class () extends Migration {
             $table->timestamps();
         });
 
-        Schema::create('blog_tags', function (Blueprint $table) {
+        Schema::create('tags', function (Blueprint $table) {
             $table->id();
             $table->string('name', 50)->unique();
             $table->string('slug', 155)->unique();
             $table->timestamps();
         });
 
-        Schema::create('blog_post_blog_tag', function (Blueprint $table) {
+        Schema::create('post_tag', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("post_id")
-                ->constrained('blog_posts')
+            $table->foreignId('post_id')
+                ->constrained('posts')
                 ->cascadeOnDelete();
-            $table->foreignId("tag_id")
-                ->constrained('blog_tags')
+            $table->foreignId('tag_id')
+                ->constrained('tags')
                 ->cascadeOnDelete();
             $table->timestamps();
         });
 
-        Schema::create( 'blog_share_snippets', function (Blueprint $table) {
+        Schema::create( 'share_snippets', function (Blueprint $table) {
             $table->id();
             $table->longText('script_code');
             $table->text('html_code');
@@ -93,13 +93,12 @@ return new class () extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('blog_categories');
-        Schema::dropIfExists('blog_users');
-        Schema::dropIfExists('blog_posts');
-        Schema::dropIfExists('blog_category_blog_post');
-        Schema::dropIfExists('blog_comments');
-        Schema::dropIfExists('blog_tags');
-        Schema::dropIfExists('blog_post_blog_tag');
-        Schema::dropIfExists('blog_share_snippets');
+        Schema::dropIfExists('post_tag');
+        Schema::dropIfExists('category_post');
+        Schema::dropIfExists('comments');
+        Schema::dropIfExists('posts');
+        Schema::dropIfExists('tags');
+        Schema::dropIfExists('categories');
+        Schema::dropIfExists('share_snippets');
     }
 };
