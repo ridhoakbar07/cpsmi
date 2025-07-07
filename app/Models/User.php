@@ -17,7 +17,7 @@ use Spatie\Permission\Traits\HasRoles;
 class User extends Authenticatable implements FilamentUser, MustVerifyEmail
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable, HasBlog, HasRoles, UsingTwoFA;
+    use HasFactory, Notifiable, HasRoles, UsingTwoFA;
 
     /**
      * The attributes that are mass assignable.
