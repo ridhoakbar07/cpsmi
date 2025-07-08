@@ -150,27 +150,23 @@ class PostResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->deferLoading()
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('sub_title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('status'),
-                Tables\Columns\TextColumn::make('published_at')
-                    ->dateTime()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('scheduled_for')
-                    ->dateTime()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('cover_photo_path')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('photo_alt_text')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('user_id')
-                    ->numeric()
-                    ->sortable(),
+                    ->description(function (Post $record) {
+                        return Str::limit($record->sub_title, 40);
+                    })
+                    ->searchable()->limit(20),
+                Tables\Columns\TextColumn::make('status')
+                    ->badge()
+                    ->color(function ($state) {
+                        return $state->getColor();
+                    }),
+                Tables\Columns\ImageColumn::make('cover_photo_path')->label('Cover Photo'),
+
+                Tables\Columns\TextColumn::make('user.name')
+                    ->label('Author'),
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -179,12 +175,19 @@ class PostResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-            ])
+            ])->defaultSort('id', 'desc')
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('user')
+                    ->relationship('user', 'name')
+                    ->searchable()
+                    ->preload()
+                    ->multiple(),
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\EditAction::make(),
+                    Tables\Actions\ViewAction::make(),
+                ]),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
