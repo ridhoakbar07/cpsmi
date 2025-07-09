@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use BezhanSalleh\FilamentLanguageSwitch\LanguageSwitch;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -24,5 +25,7 @@ class AppServiceProvider extends ServiceProvider
             $switch
                 ->locales(['id', 'en']); // also accepts a closure
         });
+
+        Blade::component('layouts.app', \App\View\Components\Layouts\App::class);
     }
 }
