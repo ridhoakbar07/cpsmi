@@ -26,5 +26,5 @@
     </div>
 
     {{-- Blog Section --}}
-    <x-blog />
+    <x-artikel />
 </x-layouts.app>
