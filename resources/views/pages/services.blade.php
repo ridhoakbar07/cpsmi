@@ -1,7 +1,6 @@
 <x-layouts.app :title="'Layanan | PT. Inayah Bintang Borneo'">
     <!-- Hero Background with Animated Gradient -->
     <div class="relative">
-        
         <div class="relative container mx-auto px-4 py-16">
             <!-- Header Section -->
             <div class="mx-auto max-w-4xl text-center mb-20">

@@ -7,7 +7,6 @@
                 <p class="mt-2 text-lg text-blue-700 dark:text-gray-300">Tips dan info terbaru seputar dunia
                     ekspedisi & logistik.</p>
             </div>
-            <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
             <div class="relative">
                 <div class="overflow-hidden">
                     @php
