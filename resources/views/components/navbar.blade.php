@@ -6,7 +6,6 @@
     </div>
   </div>
   <nav class="container mx-auto flex items-center justify-between py-4 px-6">
-    <!-- Logo -->
     <a href="#"
       class="flex items-center text-gray-900 dark:text-blue-100 tracking-tight hover:font-bold hover:text-blue-900 dark:hover:text-blue-200 transition-all delay-100 duration-100 ease-in-out hover:scale-110">
       <img id="navbar-logo-img" src="{{ asset('/storage/assets/logo.png') }}" class="mr-3 h-6 sm:h-9 hidden md:inline"
@@ -16,7 +15,7 @@
         Bintang Borneo</span>
     </a>
 
-    <!-- Main menu (desktop) -->
+    <!-- Menu Desktop -->
     <div class="hidden lg:flex flex-1 justify-center items-center" id="main-menu">
       <ul class="flex flex-col mt-4 font-semibold lg:flex-row lg:space-x-8 lg:mt-0">
         <li>
@@ -44,9 +43,7 @@
       </ul>
     </div>
 
-    <!-- Kanan: Hamburger, Theme-toggle, Profile/Login -->
     <div class="flex items-center space-x-1">
-      <!-- Tombol tema gelap / terang -->
       <button id="theme-toggle" type="button"
         class="rounded-full text-gray-900 dark:text-blue-100 hover:text-gray-800 dark:hover:text-blue-200 text-sm p-1 transition delay-150 duration-300 ease-in-out hover:scale-110">
         <svg id="theme-toggle-dark-icon"
@@ -62,7 +59,6 @@
             fill-rule="evenodd" clip-rule="evenodd"></path>
         </svg>
       </button>
-      <!-- Hamburger button (mobile only) -->
       <button id="hamburger-btn"
         class="lg:hidden flex items-center px-3 py-2 border rounded text-gray-900 dark:text-blue-100 border-gray-400 dark:border-gray-600 focus:outline-none"
         aria-label="Open Menu">
@@ -70,7 +66,6 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
-      <!-- Profile / Login Button (hidden on small devices) -->
       <div class="hidden lg:block">
         @auth
       <div class="relative group">
@@ -131,7 +126,7 @@
   </nav>
 </header>
 
-<!-- Mobile menu, hidden jika selain perangkat mobile -->
+<!-- Menu Mobile -->
 <div id="mobile-menu"
   class="lg:hidden fixed left-0 top-0 right-0 z-50 bg-white dark:bg-gray-900 bg-opacity-95 dark:bg-opacity-95 backdrop-blur-xl transition-all duration-300 transform -translate-x-full"
   style="height: auto; max-height: 100dvh; overflow-y: auto;">
@@ -193,7 +188,6 @@
     <li>
       <a href="{{route('contact-us') }}"
         class="flex items-center gap-2 block py-2 text-gray-900 dark:text-blue-100 hover:font-bold hover:text-blue-900 dark:hover:text-blue-200">
-        <!-- Mail Icon (Contact) -->
         <svg xmlns="http://www.w3.org/2000/svg"
           class="w-5 h-5 text-gray-900 dark:text-blue-100 group-hover:text-blue-900 dark:group-hover:text-blue-200 transition"
           fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -251,7 +245,6 @@
 
 @push('scripts')
   <script>
-    // Sticky navbar scroll effect
     const navbar = document.getElementById('main-navbar');
     const logoImg = document.getElementById('navbar-logo-img');
     const logoText = document.getElementById('navbar-logo-text');
@@ -267,12 +260,10 @@
     }
     });
 
-    // Theme toggle (optional)
     const themeToggle = document.getElementById('theme-toggle');
     const darkIcon = document.getElementById('theme-toggle-dark-icon');
     const lightIcon = document.getElementById('theme-toggle-light-icon');
 
-    // Set initial theme based on localStorage or system preference
     if (
     localStorage.getItem('theme') === 'dark' ||
     (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)
@@ -282,7 +273,6 @@
     document.documentElement.classList.remove('dark');
     }
 
-    // Update icons based on theme
     function updateThemeIcons() {
     if (document.documentElement.classList.contains('dark')) {
       darkIcon.classList.remove('hidden');
@@ -293,12 +283,10 @@
     }
     }
 
-    // inisial awal icon tema gelap / terang
     updateThemeIcons();
 
     themeToggle.addEventListener('click', function () {
     document.documentElement.classList.toggle('dark');
-    // Save theme preference
     if (document.documentElement.classList.contains('dark')) {
       localStorage.setItem('theme', 'dark');
     } else {
@@ -307,7 +295,6 @@
     updateThemeIcons();
     });
 
-    // Hamburger menu logic
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const closeMobileMenu = document.getElementById('close-mobile-menu');
@@ -315,21 +302,20 @@
     hamburgerBtn.addEventListener('click', function () {
     mobileMenu.classList.remove('-translate-x-full');
     mobileMenu.classList.add('translate-x-0');
-    navbar.classList.add('hidden'); // Sembunyikan navbar
+    navbar.classList.add('hidden');
     });
 
     closeMobileMenu.addEventListener('click', function () {
     mobileMenu.classList.add('-translate-x-full');
     mobileMenu.classList.remove('translate-x-0');
-    navbar.classList.remove('hidden'); // Tampilkan navbar lagi
+    navbar.classList.remove('hidden');
     });
 
-    // Optional: close menu when clicking outside
     document.addEventListener('click', function (e) {
     if (!mobileMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
       mobileMenu.classList.add('-translate-x-full');
       mobileMenu.classList.remove('translate-x-0');
-      navbar.classList.remove('hidden'); // Tampilkan navbar lagi
+      navbar.classList.remove('hidden');
     }
     });
   </script>

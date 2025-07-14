@@ -7,8 +7,7 @@
         <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
 
             <div class="relative lg:row-span-2 rounded-3xl">
-                <div class="absolute inset-px rounded-lg lg:rounded-l-4xl"
-                    style="background: linear-gradient(135deg, #dfefff80, #f4f9ff80);"></div>
+        
                 <div
                     class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
                     <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
@@ -34,8 +33,7 @@
                 </div>
             </div>
             <div class="relative max-lg:row-start-1 rounded-3xl">
-                <div class="absolute inset-px rounded-lg"
-                    style="background: linear-gradient(135deg, #dfefff80, #f4f9ff80);"></div>
+                <div class="absolute inset-px rounded-lg"></div>
                 <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
                     <div class="px-8 pt-8 sm:px-10 sm:pt-10">
                         <p
@@ -80,8 +78,7 @@
                 </div>
             </div>
             <div class="relative lg:row-span-2 rounded-3xl">
-                <div class="absolute inset-px rounded-lg lg:rounded-r-4xl"
-                    style="background: linear-gradient(135deg, #dfefff80, #f4f9ff80);"></div>
+                <div class="absolute inset-px rounded-lg lg:rounded-r-4xl"></div>
                 <div
                     class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-r-[calc(2rem+1px)]">
                     <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
