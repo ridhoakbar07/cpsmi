@@ -1,5 +1,5 @@
-<div class="my-24 mx-12 max-w-7xl px-6 lg:px-8">
-    <div class="flex flex-col items-center justify-center w-full">
+<div class="my-24 mx-12 max-w-7xl px-6 lg:px-8 backdrop-blur-sm rounded-xl shadow-sm">
+    <div class="flex flex-col items-center w-full">
         <div class="py-24 w-full max-w-7xl px-4 mx-auto rounded-3xl">
             <div class="text-center">
                 <h2 class="text-base font-semibold text-indigo-600 dark:text-indigo-400">Paket

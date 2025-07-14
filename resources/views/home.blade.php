@@ -11,14 +11,9 @@
     {{-- Feature and Pricing --}}
     <div class="flex flex-col items-center justify-center">
         <div class="container w-auto mx-auto rounded-3xl relative overflow-hidden">
-            <div class="absolute inset-0 -z-10">
-                <div class="w-full h-full rounded-3xl opacity-70"
-                    style="background:rgba(244,247,255,0.18);backdrop-filter:blur(36px);-webkit-backdrop-filter:blur(36px);">
-                </div>
-            </div>
 
             {{-- Feature Section --}}
-            <x-feature />
+            <x-visi-misi />
 
             {{-- Pricing Section --}}
             <x-pricing />

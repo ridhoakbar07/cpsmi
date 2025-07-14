@@ -25,17 +25,14 @@
 
 <body class="bg-gray-100 text-gray-900 backdrop-blur-xs backdrop-sepia-30"
     style="background-image: url('{{ asset('/storage/assets/background.jpg') }}'); background-size: cover; background-position: center; background-attachment: fixed;">
-
     <x-navbar />
-    <main class="container-fluid mx-auto">
-        <div class="pointer-events-none fixed inset-x-0 top-0 left-0 right-0 -z-10 overflow-hidden blur-3xl w-full h-full"
+    <main class="container-fluid">
+        <div class="pointer-events-none fixed inset-x-0 top-0 -z-10 overflow-hidden blur-3xl h-full"
             aria-hidden="true" style="position: fixed;">
-            <div
-                class="relative aspect-[1155/678] bg-gradient-to-b from-slate-50 from-0% via-cyan-50 via-25% to-blue-100 to-100% opacity-50%">
+            <div class="relative aspect-[1155/678] opacity-30 h-full bg-gradient-to-br from-sky-200 via-sky-300 to-sky-500 dark:from-blue-900 dark:via-sky-800 dark:to-sky-600">
             </div>
         </div>
         {{ $slot }}
-
         <button
             class="fixed right-8 bottom-8 z-50 p-3 rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 transition-all focus:outline-none"
             aria-label="Scroll to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
