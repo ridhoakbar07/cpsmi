@@ -1,7 +1,15 @@
-<div class="max-w-7xl mx-auto">
+<div class="max-w-7xl mx-auto mt-12">
+    <div class="mx-auto max-w-2xl text-center mb-16">
+        <h2
+            class="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+            Layanan Kami</h2>
+        <p class="text-lg text-gray-900 dark:text-gray-300">Pilih jenis container yang sesuai kebutuhan logistik Anda.
+            Kami menyediakan container 20ft dan 40ft dengan spesifikasi lengkap dan layanan profesional.</p>
+        <hr class="my-6 border-t-2 border-blue-200 dark:border-gray-700 w-full">
+    </div>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <!-- Container 20ft Service -->
-        <div class="group">
+        <div class="group mx-4 lg:mx-0">
             <div
                 class="relative h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/20 dark:border-gray-700/30 rounded-3xl p-8 shadow-xl">
                 <!-- Decorative Elements -->
@@ -168,7 +176,7 @@
         </div>
 
         <!-- Container 40ft Service -->
-        <div class="group">
+        <div class="group mx-4 lg:mx-0">
             <div
                 class="relative h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/20 dark:border-gray-700/30 rounded-3xl p-8 shadow-xl">
                 <!-- Decorative Elements -->

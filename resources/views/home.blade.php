@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<x-layouts.app :title="'Selamat Datang di PT. Inayah Bintang Borneo'">
-=======
 <x-landing-page.layouts.app :title="'Selamat Datang di PT. Inayah Bintang Borneo'">
->>>>>>> dcd863326a13615bf16e80f23ab6a0bb215cb5cf
     {{-- Hero Section --}}
     <x-landing-page.components.hero />
 
@@ -19,10 +15,5 @@
     </div>
 
     {{-- Blog Section --}}
-<<<<<<< HEAD
-    <x-artikel />
-</x-layouts.app>
-=======
     <x-landing-page.components.artikel />
 </x-landing-page.layouts.app>
->>>>>>> dcd863326a13615bf16e80f23ab6a0bb215cb5cf
