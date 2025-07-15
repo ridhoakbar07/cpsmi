@@ -25,7 +25,7 @@
 
 <body class="bg-gray-100 text-gray-900 backdrop-blur-xs backdrop-sepia-30"
     style="background-image: url('{{ asset('/storage/assets/background.jpg') }}'); background-size: cover; background-position: center; background-attachment: fixed;">
-    <x-navbar />
+    <x-landing-page.components.navbar />
     <main class="container-fluid">
         <div class="pointer-events-none fixed inset-x-0 top-0 -z-10 overflow-hidden blur-3xl h-full"
             aria-hidden="true" style="position: fixed;">
@@ -43,10 +43,8 @@
         </button>
     </main>
 
-    <x-footer />
+    <x-landing-page.components.footer />
 
-    {{--
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script> --}}
     @stack('scripts')
 </body>
 

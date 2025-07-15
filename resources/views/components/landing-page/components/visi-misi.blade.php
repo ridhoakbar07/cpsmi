@@ -133,10 +133,10 @@
                 class="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl border border-white/20 dark:border-gray-700/30 rounded-3xl p-8 shadow-xl">
                 <div class="text-center mb-12">
                     <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Nilai-Nilai Perusahaan</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-lg">Fondasi yang memandu setiap langkah
-                        perjalanan kami</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg">Fondasi yang memandu setiap langkah perjalanan kami</p>
                 </div>
 
+<<<<<<< HEAD:resources/views/components/visi-misi.blade.php
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Kecepatan & Ketepatan -->
                     <div class="text-center group">
@@ -150,24 +150,39 @@
                         <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Kecepatan & Ketepatan</h4>
                         <p class="text-gray-600 dark:text-gray-300">Mengutamakan pengiriman yang cepat dan tepat waktu
                             untuk kepuasan pelanggan.</p>
+=======
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 md:gap-4 xl:gap-6">
+                    <!-- Kecepatan -->
+                    <div class="text-center group">
+                        <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m4 0h-1V7h-1m-4 0h1v4h1m-4 0h1v4h1" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Kecepatan</h4>
+>>>>>>> dcd863326a13615bf16e80f23ab6a0bb215cb5cf:resources/views/components/landing-page/components/visi-misi.blade.php
                     </div>
 
                     <!-- Kualitas Pelayanan -->
                     <div class="text-center group">
-                        <div
-                            class="w-20 h-20 bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <div class="w-20 h-20 bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
                             </svg>
                         </div>
+<<<<<<< HEAD:resources/views/components/visi-misi.blade.php
                         <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Kualitas Pelayanan</h4>
                         <p class="text-gray-600 dark:text-gray-300">Selalu menjaga dan meningkatkan mutu layanan kepada
                             pelanggan.</p>
+=======
+                        <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Kualitas</h4>
+                        <!-- description removed -->
+>>>>>>> dcd863326a13615bf16e80f23ab6a0bb215cb5cf:resources/views/components/landing-page/components/visi-misi.blade.php
                     </div>
 
                     <!-- Keamanan -->
                     <div class="text-center group">
+<<<<<<< HEAD:resources/views/components/visi-misi.blade.php
                         <div
                             class="w-20 h-20 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -192,6 +207,48 @@
                         <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Transparansi & Kompetitif</h4>
                         <p class="text-gray-600 dark:text-gray-300">Memberikan informasi yang transparan dan harga yang
                             kompetitif untuk membangun kepercayaan.</p>
+=======
+                        <div class="w-20 h-20 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.104 0 2-.896 2-2V7a2 2 0 10-4 0v2c0 1.104.896 2 2 2zm6 2v5a2 2 0 01-2 2H8a2 2 0 01-2-2v-5a6 6 0 1112 0z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Keamanan</h4>
+                        <!-- description removed -->
+                    </div>
+
+                    <!-- Transparansi -->
+                    <div class="text-center group">
+                        <div class="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405M19 13V7a2 2 0 00-2-2H7a2 2 0 00-2 2v6m12 4v2a2 2 0 01-2 2H7a2 2 0 01-2-2v-2m10-4H6" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Transparansi</h4>
+                        <!-- description removed -->
+                    </div>
+
+                    <!-- Harga Kompetitif -->
+                    <div class="text-center group">
+                        <div class="w-20 h-20 bg-gradient-to-r from-green-500 to-lime-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 0V4m0 8v8m-4-4h8" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Harga Kompetitif</h4>
+                        <!-- description removed -->
+                    </div>
+
+                    <!-- Pengembangan Berkelanjutan -->
+                    <div class="text-center group">
+                        <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Pengembangan Berkelanjutan</h4>
+                        <!-- description removed -->
+>>>>>>> dcd863326a13615bf16e80f23ab6a0bb215cb5cf:resources/views/components/landing-page/components/visi-misi.blade.php
                     </div>
                 </div>
             </div>
