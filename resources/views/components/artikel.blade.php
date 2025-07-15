@@ -3,7 +3,8 @@
         <div class="mx-12 max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl lg:mx-0">
                 <h2 class="text-4xl font-semibold tracking-tight text-blue-900 dark:text-gray-100 sm:text-5xl">
-                    Artikel Ekspedisi</h2>
+                    Artikel Ekspedisi
+                </h2>
                 <p class="mt-2 text-lg text-blue-700 dark:text-gray-300">Tips dan info terbaru seputar dunia
                     ekspedisi & logistik.</p>
             </div>
@@ -80,7 +81,10 @@
                                 @foreach (array_chunk($post, 3) as $slide)
                                     <div class="min-w-full px-12 grid grid-cols-1 gap-x-8 gap-y-8 pt-10 sm:mt-8 sm:pt-16 lg:grid-cols-3">
                                         @foreach ($slide as $item)
-                                            <article class="flex max-w-xl flex-col items-start justify-between">
+                                            <article 
+                                                class="flex max-w-xl flex-col items-start justify-between 
+                                                bg-white/80 dark:bg-gray-800/80 rounded-md shadow-md 
+                                                p-6 transition hover:shadow-lg">
                                                 <div class="flex items-center gap-x-4 text-xs">
                                                     <time datetime="{{ $item['date'] }}"
                                                         class="text-blue-700 dark:text-gray-400">{{ $item['date_text'] }}</time>

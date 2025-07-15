@@ -3,15 +3,6 @@
         <div class="isolate">
             <!-- Header Section -->
             <div class="mx-auto max-w-2xl text-center mb-16">
-                <div
-                    class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl mb-6 shadow-lg">
-                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                    </svg>
-                </div>
                 <h1
                     class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
                     Visi & Misi
@@ -31,10 +22,11 @@
                         <div class="flex items-center mb-6">
                             <div
                                 class="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
+                                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                                 </svg>
                             </div>
                             <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Visi</h2>
@@ -68,10 +60,9 @@
                         <div class="flex items-center mb-6">
                             <div
                                 class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
                             <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Misi</h2>
@@ -147,20 +138,21 @@
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Integritas -->
+                    <!-- Kecepatan & Ketepatan -->
                     <div class="text-center group">
                         <div
-                            class="w-20 h-20 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                            class="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
                             </svg>
                         </div>
-                        <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Integritas</h4>
-                        <p class="text-gray-600 dark:text-gray-300">Berkomitmen pada kejujuran dan transparansi</p>
+                        <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Kecepatan & Ketepatan</h4>
+                        <p class="text-gray-600 dark:text-gray-300">Mengutamakan pengiriman yang cepat dan tepat waktu
+                            untuk kepuasan pelanggan.</p>
                     </div>
 
-                    <!-- Kualitas -->
+                    <!-- Kualitas Pelayanan -->
                     <div class="text-center group">
                         <div
                             class="w-20 h-20 bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -169,34 +161,37 @@
                                     d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
                             </svg>
                         </div>
-                        <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Kualitas</h4>
-                        <p class="text-gray-600 dark:text-gray-300">Mengutamakan standar tertinggi dalam layanan</p>
+                        <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Kualitas Pelayanan</h4>
+                        <p class="text-gray-600 dark:text-gray-300">Selalu menjaga dan meningkatkan mutu layanan kepada
+                            pelanggan.</p>
                     </div>
 
-                    <!-- Inovasi -->
+                    <!-- Keamanan -->
                     <div class="text-center group">
                         <div
-                            class="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                            class="w-20 h-20 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
-                        <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Inovasi</h4>
-                        <p class="text-gray-600 dark:text-gray-300">Terus berinovasi untuk solusi terbaik</p>
+                        <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Keamanan</h4>
+                        <p class="text-gray-600 dark:text-gray-300">Menjamin keamanan barang selama proses pengiriman.
+                        </p>
                     </div>
-                    <!-- Kepercayaan -->
+
+                    <!-- Transparansi & Kompetitif -->
                     <div class="text-center group">
                         <div
                             class="w-20 h-20 bg-gradient-to-r from-rose-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                             </svg>
                         </div>
-                        <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Kepercayaan</h4>
-                        <p class="text-gray-600 dark:text-gray-300">Membangun kepercayaan melalui komitmen</p>
+                        <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Transparansi & Kompetitif</h4>
+                        <p class="text-gray-600 dark:text-gray-300">Memberikan informasi yang transparan dan harga yang
+                            kompetitif untuk membangun kepercayaan.</p>
                     </div>
                 </div>
             </div>

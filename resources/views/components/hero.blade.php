@@ -1,13 +1,13 @@
-<div class="flex flex-col-reverse lg:flex-row items-center justify-between min-h-[50vh] sm:min-h-screen py-8 sm:py-48 lg:py-56 gap-8">
+<div
+    class="flex flex-col-reverse lg:flex-row items-center justify-between min-h-[50vh] sm:min-h-screen py-8 sm:py-48 lg:py-56 gap-8">
     <div class="container mx-auto flex flex-col lg:flex-row items-center w-full">
         <div class="flex flex-col lg:items-start text-center lg:text-left w-full lg:w-1/2 items-center">
             <h1 class="text-5xl font-semibold tracking-tight">
-                Solusi Pengiriman Cepat & Aman
+                Menuju Ekspedisi Terkemuka, Cepat & Aman
             </h1>
-            <p class="mt-8 text-lg font-medium text-gray-100 dark:text-gray-200 sm:text-xl">
-                PT. Inayah Bintang Borneo hadir untuk memenuhi kebutuhan pengiriman barang Anda ke seluruh Indonesia
-                dengan
-                layanan terbaik dan harga terjangkau.
+            <p class="mt-8 text-lg font-medium tracking-tight bg-gradient-to-r from-blue-400 to-blue-600 dark:from-blue-300 dark:to-blue-900 text-transparent bg-clip-text sm:text-xl"></p>
+                Kami berkomitmen menjadi perusahaan ekspedisi terdepan yang mengutamakan kecepatan, keamanan, dan
+                kepuasan pelanggan dalam pengiriman barang ke seluruh Indonesia hingga internasional.
             </p>
             <div class="mt-10 flex gap-x-6 lg:justify-start justify-center items-center">
                 <a href="#"

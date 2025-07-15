@@ -1,10 +1,4 @@
 <x-layouts.app :title="'Selamat Datang di PT. Inayah Bintang Borneo'">
-    <style>
-        .text-blue-900,
-        .text-blue-900 * {
-            color: #1b1b1f !important;
-        }
-    </style>
     {{-- Hero Section --}}
     <x-hero />
 
