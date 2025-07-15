@@ -11,6 +11,9 @@
 
             {{-- Service Section --}}
             <x-landing-page.components.pricing />
+
+            {{-- Service Section --}}
+            <x-landing-page.components.faq />
         </div>
     </div>
 

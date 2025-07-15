@@ -14,9 +14,9 @@ Route::get('/activity', function () {
     return view('components.landing-page.pages.activity');
 })->name('activity');
 
-// Route::get('/visi-misi', function () {
-//     return view('pages.visi-misi');
-// })->name('visi-misi');
+Route::get('/about-us', function () {
+    return view('components.landing-page.pages.about-us');
+})->name('about-us');
 
 Route::get('/services', function () {
     return view('components.landing-page.pages.services');

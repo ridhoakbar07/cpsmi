@@ -24,6 +24,10 @@
                         aria-current="page">Beranda</a>
                 </li>
                 <li>
+                    <a href="{{ route('about-us') }}"
+                        class="block py-2 text-gray-900 dark:text-blue-100 tracking-tight hover:animate-[pulse_1s_ease-in-out] hover:font-bold hover:text-blue-900 dark:hover:text-blue-200 transition delay-100 duration-100 ease-in-out hover:scale-110">Tentang Kami</a>
+                </li>
+                <li>
                     <a href="{{ route('services') }}"
                         class="block py-2 text-gray-900 dark:text-blue-100 tracking-tight hover:animate-[pulse_1s_ease-in-out] hover:font-bold hover:text-blue-900 dark:hover:text-blue-200 transition delay-100 duration-100 ease-in-out hover:scale-110">Layanan</a>
                 </li>
