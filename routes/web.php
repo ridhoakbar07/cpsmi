@@ -7,11 +7,11 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/contact-us', function () {
-    return view('pages.contact-us');
+    return view('components.landing-page.pages.contact-us');
 })->name('contact-us');
 
 Route::get('/activity', function () {
-    return view('pages.activity');
+    return view('components.landing-page.pages.activity');
 })->name('activity');
 
 // Route::get('/visi-misi', function () {
@@ -19,5 +19,5 @@ Route::get('/activity', function () {
 // })->name('visi-misi');
 
 Route::get('/services', function () {
-    return view('pages.services');
+    return view('components.landing-page.pages.services');
 })->name('services');
