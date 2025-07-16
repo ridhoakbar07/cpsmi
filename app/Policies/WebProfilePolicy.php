@@ -3,10 +3,10 @@
 namespace App\Policies;
 
 use App\Models\User;
-use App\Models\WebSetting;
+use App\Models\WebProfile;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class WebSettingPolicy
+class WebProfilePolicy
 {
     use HandlesAuthorization;
 
@@ -15,15 +15,15 @@ class WebSettingPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->can('view_any_web::setting');
+        return $user->can('view_any_web::profile');
     }
 
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, WebSetting $webSetting): bool
+    public function view(User $user, WebProfile $webProfile): bool
     {
-        return $user->can('view_web::setting');
+        return $user->can('view_web::profile');
     }
 
     /**
@@ -31,23 +31,23 @@ class WebSettingPolicy
      */
     public function create(User $user): bool
     {
-        return $user->can('create_web::setting');
+        return $user->can('create_web::profile');
     }
 
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, WebSetting $webSetting): bool
+    public function update(User $user, WebProfile $webProfile): bool
     {
-        return $user->can('update_web::setting');
+        return $user->can('update_web::profile');
     }
 
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, WebSetting $webSetting): bool
+    public function delete(User $user, WebProfile $webProfile): bool
     {
-        return $user->can('delete_web::setting');
+        return $user->can('delete_web::profile');
     }
 
     /**
@@ -55,15 +55,15 @@ class WebSettingPolicy
      */
     public function deleteAny(User $user): bool
     {
-        return $user->can('delete_any_web::setting');
+        return $user->can('delete_any_web::profile');
     }
 
     /**
      * Determine whether the user can permanently delete.
      */
-    public function forceDelete(User $user, WebSetting $webSetting): bool
+    public function forceDelete(User $user, WebProfile $webProfile): bool
     {
-        return $user->can('force_delete_web::setting');
+        return $user->can('force_delete_web::profile');
     }
 
     /**
@@ -71,15 +71,15 @@ class WebSettingPolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_web::setting');
+        return $user->can('force_delete_any_web::profile');
     }
 
     /**
      * Determine whether the user can restore.
      */
-    public function restore(User $user, WebSetting $webSetting): bool
+    public function restore(User $user, WebProfile $webProfile): bool
     {
-        return $user->can('restore_web::setting');
+        return $user->can('restore_web::profile');
     }
 
     /**
@@ -87,15 +87,15 @@ class WebSettingPolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_web::setting');
+        return $user->can('restore_any_web::profile');
     }
 
     /**
      * Determine whether the user can replicate.
      */
-    public function replicate(User $user, WebSetting $webSetting): bool
+    public function replicate(User $user, WebProfile $webProfile): bool
     {
-        return $user->can('replicate_web::setting');
+        return $user->can('replicate_web::profile');
     }
 
     /**
@@ -103,6 +103,6 @@ class WebSettingPolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_web::setting');
+        return $user->can('reorder_web::profile');
     }
 }

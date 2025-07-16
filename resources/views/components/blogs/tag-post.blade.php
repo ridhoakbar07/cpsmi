@@ -9,13 +9,13 @@
     <section class="pb-16 pt-8">
         <div class="container mx-auto">
             <div class="grid grid-cols-3 gap-x-14 gap-y-14">
-                @forelse ($posts as $post)
+                <!-- @forelse ($posts as $post)
                     <x-blog-card :post="$post"/>
                 @empty
                     <div class="flex justify-center w-full">
                         <h2 class="text-2xl font-semibold">No posts found</h2>
                     </div>
-                @endforelse
+                @endforelse -->
             </div>
             <div class="mt-20">
                 {{ $posts->links() }}

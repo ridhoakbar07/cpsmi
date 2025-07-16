@@ -9,4 +9,6 @@ class Blog extends Cluster
     protected static ?string $navigationIcon = 'heroicon-o-book-open';
 
     protected static ?string $navigationGroup = 'Web';
+
+    protected static ?int $navigationSort = 2;
 }

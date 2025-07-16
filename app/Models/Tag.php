@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Firefly\FilamentBlog\Models\Post;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 

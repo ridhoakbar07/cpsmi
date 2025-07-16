@@ -4,22 +4,27 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class WebSetting extends Model
+class WebProfile extends Model
 {
     protected $fillable = [
-        'title',
-        'description',
+        'nama_perusahaan',
+        'alamat',
+        'telp',
+        'kontak_mail',
         'logo',
         'favicon',
-        'organization_name',
-        'google_console_code',
-        'google_analytic_code',
-        'google_adsense_code',
+        'sejarah',
+        'visi',
+        'misi',
+        'struktur_organisasi',
+        'personil',
         'quick_links',
     ];
 
     protected $casts = [
+        'kontak_email' => 'json',
         'quick_links' => 'json',
+        'personil' => 'json',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];

@@ -10,7 +10,7 @@
                 kepuasan pelanggan dalam pengiriman barang ke seluruh Indonesia hingga internasional.
             </p>
             <div class="mt-10 flex gap-x-6 lg:justify-start justify-center items-center">
-                <a href="#"
+                <a href="{{ route('services') }}"
                     class="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-gray-900 dark:text-blue-100 shadow hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
                     Layanan Kami
                 </a>

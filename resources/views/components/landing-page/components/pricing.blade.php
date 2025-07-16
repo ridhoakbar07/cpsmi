@@ -50,7 +50,7 @@
                             class="bg-white/60 dark:bg-gray-800/60 p-4 rounded-2xl border border-blue-200 dark:border-blue-800">
                             <div class="flex items-center mb-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    stroke-width="1.5" stroke="currentColor" class="size-6 text-blue-600 dark:text-blue-400">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
                                 </svg>
@@ -63,7 +63,7 @@
                             class="bg-white/60 dark:bg-gray-800/60 p-4 rounded-2xl border border-blue-200 dark:border-blue-800">
                             <div class="flex items-center mb-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    stroke-width="1.5" stroke="currentColor" class="size-6 text-blue-600 dark:text-blue-400">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
                                 </svg>
@@ -75,7 +75,7 @@
                             class="bg-white/60 dark:bg-gray-800/60 p-4 rounded-2xl border border-blue-200 dark:border-blue-800">
                             <div class="flex items-center mb-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                                    fill="currentColor" class="bi bi-truck size-6 text-blue-600 dark:text-blue-400" viewBox="0 0 16 16">
                                     <path
                                         d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
                                 </svg>
@@ -87,7 +87,7 @@
                             class="bg-white/60 dark:bg-gray-800/60 p-4 rounded-2xl border border-blue-200 dark:border-blue-800">
                             <div class="flex items-center mb-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-truck-flatbed" viewBox="0 0 16 16">
+                                    fill="currentColor" class="bi bi-truck-flatbed size-6 text-blue-600 dark:text-blue-400" viewBox="0 0 16 16">
                                     <path
                                         d="M11.5 4a.5.5 0 0 1 .5.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-4 0 1 1 0 0 1-1-1v-1h11V4.5a.5.5 0 0 1 .5-.5M3 11a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2m1.732 0h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4a2 2 0 0 1 1.732 1" />
                                 </svg>
@@ -217,10 +217,10 @@
                         <div
                             class="bg-white/60 dark:bg-gray-800/60 p-4 rounded-2xl border border-purple-200 dark:border-purple-800">
                             <div class="flex items-center mb-2">
-                                <svg class="w-5 h-5 text-purple-600 dark:text-purple-400 mr-2" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4 8V4a1 1 0 011-1h4m0 0V1m0 2h2m0 0V1m0 2h4a1 1 0 011 1v4M4 16v4a1 1 0 001 1h4m0 0v2m0-2h2m0 0v2m0-2h4a1 1 0 001-1v-4" />
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="16" height="16"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 dark:text-purple-400">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
                                 </svg>
                                 <span class="ml-2 text-sm font-semibold text-gray-700 dark:text-gray-300">Dimensi
                                     Internal</span>
@@ -230,8 +230,8 @@
                         <div
                             class="bg-white/60 dark:bg-gray-800/60 p-4 rounded-2xl border border-purple-200 dark:border-purple-800">
                             <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="16" height="16"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6 text-purple-600 dark:text-purple-400">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
                                 </svg>
@@ -243,7 +243,7 @@
                             class="bg-white/60 dark:bg-gray-800/60 p-4 rounded-2xl border border-purple-200 dark:border-purple-800">
                             <div class="flex items-center mb-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                                    fill="currentColor" class="bi bi-truck size-6 text-purple-600 dark:text-purple-400" viewBox="0 0 16 16">
                                     <path
                                         d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
                                 </svg>
@@ -255,7 +255,7 @@
                             class="bg-white/60 dark:bg-gray-800/60 p-4 rounded-2xl border border-purple-200 dark:border-purple-800">
                             <div class="flex items-center mb-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-truck-flatbed" viewBox="0 0 16 16">
+                                    fill="currentColor" class="bi bi-truck-flatbed size-6 text-purple-600 dark:text-purple-400" viewBox="0 0 16 16">
                                     <path
                                         d="M11.5 4a.5.5 0 0 1 .5.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-4 0 1 1 0 0 1-1-1v-1h11V4.5a.5.5 0 0 1 .5-.5M3 11a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2m1.732 0h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4a2 2 0 0 1 1.732 1" />
                                 </svg>

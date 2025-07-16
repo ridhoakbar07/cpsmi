@@ -153,49 +153,6 @@
 
                     </div>
                 </div>
-
-                <!-- Statistics Section -->
-                <div class="mx-auto max-w-7xl mt-20">
-                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div
-                            class="text-center p-6 rounded-2xl bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg">
-                            <div class="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">2014</div>
-                            <div class="text-sm text-gray-700 dark:text-gray-300">Tahun Berdiri</div>
-                        </div>
-                        <div
-                            class="text-center p-6 rounded-2xl bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg">
-                            <div class="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">1000+</div>
-                            <div class="text-sm text-gray-700 dark:text-gray-300">Pengiriman/Bulan</div>
-                        </div>
-                        <div
-                            class="text-center p-6 rounded-2xl bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg">
-                            <div class="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">50+</div>
-                            <div class="text-sm text-gray-700 dark:text-gray-300">Mitra Kerja</div>
-                        </div>
-                        <div
-                            class="text-center p-6 rounded-2xl bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-lg">
-                            <div class="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">24/7</div>
-                            <div class="text-sm text-gray-700 dark:text-gray-300">Customer Support</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Call to Action -->
-                <div class="mx-auto max-w-4xl mt-20 text-center">
-                    <div class="bg-gradient-to-r from-indigo-600 to-blue-600 rounded-3xl p-8 shadow-xl">
-                        <h3 class="text-2xl font-bold text-white mb-4">Tertarik dengan Layanan Kami?</h3>
-                        <p class="text-blue-100 mb-6">Hubungi kami untuk konsultasi dan penawaran terbaik sesuai
-                            kebutuhan bisnis Anda</p>
-                        <a href="/contact-us"
-                            class="inline-flex items-center px-6 py-3 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-gray-50 transition-colors duration-200">
-                            Hubungi Kami Sekarang
-                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

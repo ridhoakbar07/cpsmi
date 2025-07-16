@@ -18,5 +18,5 @@
     </div>
 
     {{-- Blog Section --}}
-    <x-landing-page.components.artikel />
+    <x-landing-page.components.artikel :posts="$posts" />
 </x-landing-page.layouts.app>

@@ -1,4 +1,4 @@
-@props(['title' =>'Firefly Blog', 'logo' => null] )
+@props(['title' =>'Blog', 'logo' => null] )
 <header @click.outside="showSearchModal = false" x-data="{ showSearchModal: false }" class="sticky top-0 z-[94035] mb-4">
     <div class="py-4 bg-white border-b">
         <div class="container mx-auto">
@@ -14,7 +14,7 @@
                         @endif
                     </a>
                     <div class="hidden gap-x-10 sm:flex">
-                        <a href="{{ route('filamentblog.post.index') }}" class="font-semibold text-md hover:text-primary-600">
+                        <a href="{{ route('blog.post.index') }}" class="font-semibold text-md hover:text-primary-600">
                             <span>Blogs</span>
                         </a>
                         <div class="relative group">
@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <div class="flex items-center ml-auto gap-x-10">
-                    <form action="{{ route('filamentblog.post.search') }}" method="GET">
+                    <form action="{{ route('blog.post.search') }}" method="GET">
                         <div class="relative">
                             <div class="relative">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="absolute w-5 h-5 -translate-y-1/2 pointer-events-none left-5 top-1/2 text-slate-500" viewBox="0 0 24 24">

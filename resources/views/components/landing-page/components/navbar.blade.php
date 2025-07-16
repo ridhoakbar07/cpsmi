@@ -25,11 +25,16 @@
                 </li>
                 <li>
                     <a href="{{ route('about-us') }}"
-                        class="block py-2 text-gray-900 dark:text-blue-100 tracking-tight hover:animate-[pulse_1s_ease-in-out] hover:font-bold hover:text-blue-900 dark:hover:text-blue-200 transition delay-100 duration-100 ease-in-out hover:scale-110">Tentang Kami</a>
+                        class="block py-2 text-gray-900 dark:text-blue-100 tracking-tight hover:animate-[pulse_1s_ease-in-out] hover:font-bold hover:text-blue-900 dark:hover:text-blue-200 transition delay-100 duration-100 ease-in-out hover:scale-110">Tentang
+                        Kami</a>
                 </li>
                 <li>
                     <a href="{{ route('services') }}"
                         class="block py-2 text-gray-900 dark:text-blue-100 tracking-tight hover:animate-[pulse_1s_ease-in-out] hover:font-bold hover:text-blue-900 dark:hover:text-blue-200 transition delay-100 duration-100 ease-in-out hover:scale-110">Layanan</a>
+                </li>
+                <li>
+                    <a href="{{ route('blogs') }}"
+                        class="block py-2 text-gray-900 dark:text-blue-100 tracking-tight hover:animate-[pulse_1s_ease-in-out] hover:font-bold hover:text-blue-900 dark:hover:text-blue-200 transition delay-100 duration-100 ease-in-out hover:scale-110">Blogs</a>
                 </li>
                 <li>
                     <a href="{{ route('activity') }}"
@@ -237,7 +242,7 @@
         const navbar = document.getElementById('main-navbar');
         const logoImg = document.getElementById('navbar-logo-img');
         const logoText = document.getElementById('navbar-logo-text');
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (window.scrollY > 10) {
                 navbar.classList.add('shadow-lg', 'bg-white/90', 'backdrop-blur', 'dark:bg-gray-900/90');
                 if (logoImg) logoImg.classList.add('hidden');
@@ -274,7 +279,7 @@
 
         updateThemeIcons();
 
-        themeToggle.addEventListener('click', function() {
+        themeToggle.addEventListener('click', function () {
             document.documentElement.classList.toggle('dark');
             if (document.documentElement.classList.contains('dark')) {
                 localStorage.setItem('theme', 'dark');
@@ -288,19 +293,19 @@
         const mobileMenu = document.getElementById('mobile-menu');
         const closeMobileMenu = document.getElementById('close-mobile-menu');
 
-        hamburgerBtn.addEventListener('click', function() {
+        hamburgerBtn.addEventListener('click', function () {
             mobileMenu.classList.remove('-translate-x-full');
             mobileMenu.classList.add('translate-x-0');
             navbar.classList.add('hidden');
         });
 
-        closeMobileMenu.addEventListener('click', function() {
+        closeMobileMenu.addEventListener('click', function () {
             mobileMenu.classList.add('-translate-x-full');
             mobileMenu.classList.remove('translate-x-0');
             navbar.classList.remove('hidden');
         });
 
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', function (e) {
             if (!mobileMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
                 mobileMenu.classList.add('-translate-x-full');
                 mobileMenu.classList.remove('translate-x-0');
