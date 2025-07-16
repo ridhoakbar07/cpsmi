@@ -22,7 +22,7 @@ class WebProfile extends Model
     ];
 
     protected $casts = [
-        'kontak_email' => 'json',
+        'kontak_mail' => 'json',
         'quick_links' => 'json',
         'personil' => 'json',
         'created_at' => 'datetime',

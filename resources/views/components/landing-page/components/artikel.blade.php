@@ -45,12 +45,17 @@
                                                     </p>
                                                 </div>
                                                 <div class="relative mt-8 flex items-center gap-x-4">
-                                                    <img src="https://ui-avatars.com/api/?name={{ urlencode(Auth::user()->name) }}"
-                                                        alt="" class="w-10 h-10 rounded-full bg-blue-100 dark:bg-gray-800" />
+                                                    @if(Auth::user())
+                                                        <img src="https://ui-avatars.com/api/?name={{ urlencode(Auth::user()->name) }}"
+                                                            alt="" class="w-10 h-10 rounded-full bg-blue-100 dark:bg-gray-800" />
+                                                    @else
+                                                        <img src="https://ui-avatars.com/api/?name={{ urlencode('Guest') }}"
+                                                            alt="" class="w-10 h-10 rounded-full bg-blue-100 dark:bg-gray-800" />
+                                                    @endif
                                                     <div class="text-sm">
                                                         <p class="font-semibold text-blue-900 dark:text-gray-100">
                                                             <a href="#" class="text-blue-900 dark:text-gray-100">
-                                                                <span class="absolute inset-0"></span>{{ Auth::user()->name }}
+                                                                <span class="absolute inset-0"></span>{{ Auth::user()->name ?? 'Guest'}}
                                                             </a>
                                                         </p>
                                                         <div class="flex items-center gap-x-2 text-xs">
@@ -139,12 +144,17 @@
                                                     </p>
                                                 </div>
                                                 <div class="relative mt-8 flex items-center gap-x-4">
-                                                    <img src="https://ui-avatars.com/api/?name={{ urlencode(Auth::user()->name) }}"
-                                                        alt="" class="w-10 h-10 rounded-full bg-blue-100 dark:bg-gray-800" />
+                                                    @if(Auth::user())
+                                                        <img src="https://ui-avatars.com/api/?name={{ urlencode(Auth::user()->name) }}"
+                                                            alt="" class="w-10 h-10 rounded-full bg-blue-100 dark:bg-gray-800" />
+                                                    @else
+                                                        <img src="https://ui-avatars.com/api/?name={{ urlencode('Guest') }}"
+                                                            alt="" class="w-10 h-10 rounded-full bg-blue-100 dark:bg-gray-800" />
+                                                    @endif
                                                     <div class="text-sm">
                                                         <p class="font-semibold text-blue-900 dark:text-gray-100">
                                                             <a href="#" class="text-blue-900 dark:text-gray-100">
-                                                                <span class="absolute inset-0"></span>{{ Auth::user()->name }}
+                                                                <span class="absolute inset-0"></span>{{ Auth::user()->name ?? 'Guest' }}
                                                             </a>
                                                         </p>
                                                         <div class="flex items-center gap-x-2 text-xs">

@@ -63,10 +63,8 @@ class WebProfileResource extends Resource
                             ])->columnSpanFull(),
                         FileUpload::make('logo')
                             ->label('Background')
-                            ->hint('Max height 400')
                             ->directory('assets/background')
                             ->maxSize(1024 * 1024 * 2)
-                            ->rules('dimensions:max_height=400')
                             ->nullable()->columnSpanFull(),
                         FileUpload::make('favicon')
                             ->directory('assets/favicon')
@@ -79,7 +77,8 @@ class WebProfileResource extends Resource
                             ->required()
                             ->columnSpanFull(),
                         TextArea::make('visi')
-                            ->maxLength(255),
+                            ->maxLength(255)
+                            ->columnSpanFull(),
                         \FilamentTiptapEditor\TiptapEditor::make('misi')
                             ->profile('default')
                             ->disableFloatingMenus()
@@ -107,10 +106,10 @@ class WebProfileResource extends Resource
                 Section::make('Informasi Lainnya')
                     ->schema([
                         FileUpload::make('struktur_organisasi')
-                            ->hint('Max height 400')
                             ->directory('assets/struktur_organisasi')
                             ->maxSize(1024 * 1024 * 2)
-                            ->nullable()->columnSpanFull(),
+                            ->nullable()
+                            ->columnSpanFull(),
                         Section::make('Personalia')
                             ->description('Tambahkan susunan personalia anda disini.')
                             ->schema([
@@ -166,6 +165,8 @@ class WebProfileResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
