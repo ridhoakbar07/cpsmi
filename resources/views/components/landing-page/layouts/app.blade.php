@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ $attributes->get('title', $title ?? 'My Laravel App') }}</title>
     @vite('resources/css/app.css')
-    <link rel="icon" href="{{ asset('/storage/assets/logo.png') }}" type="image/x-icon" />
+    <link rel="icon" href="{{ asset('/storage/' . $webProfile->favicon) }}" type="image/x-icon" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
@@ -25,7 +25,7 @@
 
 <body class="bg-gray-100 text-gray-900 backdrop-blur-xs backdrop-sepia-30"
     style="background-image: url('{{ asset('/storage/assets/background.jpg') }}'); background-size: cover; background-position: center; background-attachment: fixed;">
-    <x-landing-page.components.navbar />
+    <x-landing-page.components.navbar :webProfile="$webProfile"/>
     <main class="container-fluid">
         <div class="pointer-events-none fixed inset-x-0 top-0 -z-10 overflow-hidden blur-3xl h-full"
             aria-hidden="true" style="position: fixed;">
@@ -43,7 +43,7 @@
         </button>
     </main>
 
-    <x-landing-page.components.footer />
+    <x-landing-page.components.footer :webProfile="$webProfile"/>
 
     @stack('scripts')
 </body>

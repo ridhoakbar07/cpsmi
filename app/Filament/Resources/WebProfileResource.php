@@ -14,7 +14,10 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use FilamentTiptapEditor\TiptapEditor;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -70,7 +73,7 @@ class WebProfileResource extends Resource
                             ->directory('assets/favicon')
                             ->maxSize(50)
                             ->nullable()->columnSpanFull(),
-                        \FilamentTiptapEditor\TiptapEditor::make('sejarah')
+                        TiptapEditor::make('sejarah')
                             ->profile('default')
                             ->disableFloatingMenus()
                             ->extraInputAttributes(['style' => 'max-height: 30rem; min-height: 24rem'])
@@ -79,7 +82,7 @@ class WebProfileResource extends Resource
                         TextArea::make('visi')
                             ->maxLength(255)
                             ->columnSpanFull(),
-                        \FilamentTiptapEditor\TiptapEditor::make('misi')
+                        TiptapEditor::make('misi')
                             ->profile('default')
                             ->disableFloatingMenus()
                             ->extraInputAttributes(['style' => 'max-height: 30rem; min-height: 24rem'])
@@ -135,27 +138,27 @@ class WebProfileResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('nama_perusahaan')
+                TextColumn::make('nama_perusahaan')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('alamat')
+                TextColumn::make('alamat')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('telp')
+                TextColumn::make('telp')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('kontak_mail')
+                TextColumn::make('kontak_mail')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('logo')
+                ImageColumn::make('logo')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('favicon')
+                ImageColumn::make('favicon')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('visi')
+                TextColumn::make('visi')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('struktur_organisasi')
+                TextColumn::make('struktur_organisasi')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
+                TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

@@ -1,4 +1,5 @@
-<x-landing-page.layouts.app :title="'Selamat Datang di PT. Inayah Bintang Borneo'">
+<x-landing-page.layouts.app :title="'Selamat Datang di PT. Inayah Bintang Borneo'" :webProfile="$webProfiles">
+    {{-- Navbar --}}
     {{-- Hero Section --}}
     <x-landing-page.components.hero />
 

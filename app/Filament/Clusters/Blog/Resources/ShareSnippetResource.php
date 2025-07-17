@@ -7,9 +7,13 @@ use App\Filament\Clusters\Blog\Resources\ShareSnippetResource\Pages;
 use App\Filament\Clusters\Blog\Resources\ShareSnippetResource\RelationManagers;
 use App\Models\ShareSnippet;
 use Filament\Forms;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -28,13 +32,13 @@ class ShareSnippetResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Textarea::make('script_code')
+                Textarea::make('script_code')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\Textarea::make('html_code')
+                Textarea::make('html_code')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\Toggle::make('active')
+                Toggle::make('active')
                     ->required(),
             ]);
     }
@@ -43,13 +47,13 @@ class ShareSnippetResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\IconColumn::make('active')
+                IconColumn::make('active')
                     ->boolean(),
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
+                TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

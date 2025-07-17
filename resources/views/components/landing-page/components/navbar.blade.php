@@ -8,11 +8,10 @@
     <nav class="container mx-auto flex items-center justify-between py-4 px-6">
         <a href="#"
             class="flex items-center text-gray-900 dark:text-blue-100 tracking-tight hover:font-bold hover:text-blue-900 dark:hover:text-blue-200 transition-all delay-100 duration-100 ease-in-out hover:scale-110">
-            <img id="navbar-logo-img" src="{{ asset('/storage/assets/logo.png') }}"
+            <img id="navbar-logo-img" src="{{ asset('/storage/' . $webProfile->logo) }}"
                 class="mr-3 h-6 sm:h-9 hidden md:inline" alt="Logo PT" />
             <span id="navbar-logo-text"
-                class="self-center text-pretty text-md text-pretty lg:text-xl font-semibold whitespace-nowrap">Inayah
-                Bintang Borneo</span>
+                class="self-center text-pretty text-md text-pretty lg:text-xl font-semibold whitespace-nowrap">{{$webProfile->nama_perusahaan}}</span>
         </a>
 
         <!-- Menu Desktop -->

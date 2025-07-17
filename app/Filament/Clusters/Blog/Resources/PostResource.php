@@ -8,11 +8,21 @@ use App\Filament\Clusters\Blog\Resources\PostResource\Pages;
 use App\Filament\Clusters\Blog\Resources\PostResource\RelationManagers;
 use App\Models\Post;
 use Filament\Forms;
+use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\Fieldset;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\ToggleButtons;
 use Filament\Forms\Form;
 use Filament\Forms\Get;
 use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -37,15 +47,15 @@ class PostResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Section::make('Blog Details')
+                Section::make('Blog Details')
                     ->schema([
-                        Forms\Components\Fieldset::make('Titles')
+                        Fieldset::make('Titles')
                             ->schema([
-                                Forms\Components\Select::make('category_id')
+                                Select::make('category_id')
                                     ->multiple()
                                     ->preload()
                                     ->createOptionForm([
-                                        Forms\Components\TextInput::make('name')
+                                        TextInput::make('name')
                                             ->live(true)
                                             ->afterStateUpdated(function (Get $get, Set $set, ?string $operation, ?string $old, ?string $state) {
                                                 $set('slug', Str::slug($state));
@@ -53,7 +63,7 @@ class PostResource extends Resource
                                             ->unique('categories', 'name', null, 'id')
                                             ->required()
                                             ->maxLength(155),
-                                        Forms\Components\TextInput::make('slug')
+                                        TextInput::make('slug')
                                             ->unique('categories', 'slug', null, 'id')
                                             ->readOnly()
                                             ->maxLength(255),
@@ -62,7 +72,7 @@ class PostResource extends Resource
                                     ->relationship('categories', 'name')
                                     ->columnSpanFull(),
 
-                                Forms\Components\TextInput::make('title')
+                                TextInput::make('title')
                                     ->live(true)
                                     ->afterStateUpdated(fn(Set $set, ?string $state) => $set(
                                         'slug',
@@ -72,18 +82,18 @@ class PostResource extends Resource
                                     ->unique('posts', 'title', null, 'id')
                                     ->maxLength(255),
 
-                                Forms\Components\TextInput::make('slug')
+                                TextInput::make('slug')
                                     ->maxLength(255),
 
-                                Forms\Components\Textarea::make('sub_title')
+                                Textarea::make('sub_title')
                                     ->maxLength(255)
                                     ->columnSpanFull(),
 
-                                Forms\Components\Select::make('tag_id')
+                                Select::make('tag_id')
                                     ->multiple()
                                     ->preload()
                                     ->createOptionForm([
-                                        Forms\Components\TextInput::make('name')
+                                        TextInput::make('name')
                                             ->live(true)->afterStateUpdated(fn(Set $set, ?string $state) => $set(
                                                 'slug',
                                                 Str::slug($state)
@@ -91,7 +101,7 @@ class PostResource extends Resource
                                             ->unique('tags', 'name', null, 'id')
                                             ->required()
                                             ->maxLength(50),
-                                        Forms\Components\TextInput::make('slug')
+                                        TextInput::make('slug')
                                             ->unique('tags', 'slug', null, 'id')
                                             ->readOnly()
                                             ->maxLength(155),
@@ -106,9 +116,9 @@ class PostResource extends Resource
                             ->extraInputAttributes(['style' => 'max-height: 30rem; min-height: 24rem'])
                             ->required()
                             ->columnSpanFull(),
-                        Forms\Components\Fieldset::make('Feature Image')
+                        Fieldset::make('Feature Image')
                             ->schema([
-                                Forms\Components\FileUpload::make('cover_photo_path')
+                                FileUpload::make('cover_photo_path')
                                     ->label('Cover Photo')
                                     ->directory('/blog-feature-images')
                                     ->hint('This cover image is used in your blog post as a feature image. Recommended image size 1200 X 628')
@@ -118,18 +128,18 @@ class PostResource extends Resource
                                     ->maxSize(1024 * 5)
                                     ->rules('dimensions:max_width=1920,max_height=1004')
                                     ->required(),
-                                Forms\Components\TextInput::make('photo_alt_text')->required(),
+                                TextInput::make('photo_alt_text')->required(),
                             ])->columns(1),
 
-                        Forms\Components\Fieldset::make('Status')
+                        Fieldset::make('Status')
                             ->schema([
-                                Forms\Components\ToggleButtons::make('status')
+                                ToggleButtons::make('status')
                                     ->live()
                                     ->inline()
                                     ->options(PostStatus::class)
                                     ->required(),
 
-                                Forms\Components\DateTimePicker::make('scheduled_for')
+                                DateTimePicker::make('scheduled_for')
                                     ->visible(function ($get) {
                                         return $get('status') === PostStatus::SCHEDULED->value;
                                     })
@@ -139,7 +149,7 @@ class PostResource extends Resource
                                     ->minDate(now()->addMinutes(5))
                                     ->native(false),
                             ]),
-                        Forms\Components\Select::make('user_id')
+                        Select::make('user_id')
                             ->relationship('user', 'name')
                             ->nullable(false)
                             ->default(auth()->id()),
@@ -152,26 +162,26 @@ class PostResource extends Resource
         return $table
             ->deferLoading()
             ->columns([
-                Tables\Columns\TextColumn::make('title')
+                TextColumn::make('title')
                     ->description(function (Post $record) {
                         return Str::limit($record->sub_title, 40);
                     })
                     ->searchable()->limit(20),
-                Tables\Columns\TextColumn::make('status')
+                TextColumn::make('status')
                     ->badge()
                     ->color(function ($state) {
                         return $state->getColor();
                     }),
-                Tables\Columns\ImageColumn::make('cover_photo_path')->label('Cover Photo'),
+                ImageColumn::make('cover_photo_path')->label('Cover Photo'),
 
-                Tables\Columns\TextColumn::make('user.name')
+                TextColumn::make('user.name')
                     ->label('Author'),
 
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
+                TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->string('nama_perusahaan', 155)->nullable();
             $table->string('alamat', 155)->nullable();
             $table->string('telp', 155)->nullable();
-            $table->string('kontak_mail')->nullable();
+            $table->json('kontak_mail')->nullable();
             $table->string('logo')->nullable();
             $table->string('favicon')->nullable();
             $table->text('sejarah')->nullable();
