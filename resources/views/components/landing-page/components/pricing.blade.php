@@ -9,7 +9,7 @@
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <!-- Container 20ft Service -->
-        <div class="group mx-4 lg:mx-0">
+        <div class="group mx-4 lg:mx-0" data-aos="fade-right">
             <div
                 class="relative h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/20 dark:border-gray-700/30 rounded-3xl p-8 shadow-xl">
                 <!-- Decorative Elements -->
@@ -177,7 +177,7 @@
         </div>
 
         <!-- Container 40ft Service -->
-        <div class="group mx-4 lg:mx-0">
+        <div class="group mx-4 lg:mx-0" data-aos="fade-left">
             <div
                 class="relative h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/20 dark:border-gray-700/30 rounded-3xl p-8 shadow-xl">
                 <!-- Decorative Elements -->

@@ -9,7 +9,8 @@
     <link rel="icon" href="{{ asset('/storage/' . $webProfile->favicon) }}" type="image/x-icon" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
@@ -25,11 +26,12 @@
 
 <body class="bg-gray-100 text-gray-900 backdrop-blur-xs backdrop-sepia-30"
     style="background-image: url('{{ asset('/storage/assets/background.jpg') }}'); background-size: cover; background-position: center; background-attachment: fixed;">
-    <x-landing-page.components.navbar :webProfile="$webProfile"/>
+    <x-landing-page.components.navbar :webProfile="$webProfile" />
     <main class="container-fluid">
-        <div class="pointer-events-none fixed inset-x-0 top-0 -z-10 overflow-hidden blur-3xl h-full"
-            aria-hidden="true" style="position: fixed;">
-            <div class="relative aspect-[1155/678] opacity-30 h-full bg-gradient-to-br from-sky-200 via-sky-300 to-sky-500 dark:from-blue-900 dark:via-sky-800 dark:to-sky-600">
+        <div class="pointer-events-none fixed inset-x-0 top-0 -z-10 overflow-hidden blur-3xl h-full" aria-hidden="true"
+            style="position: fixed;">
+            <div
+                class="relative aspect-[1155/678] opacity-30 h-full bg-gradient-to-br from-sky-200 via-sky-300 to-sky-500 dark:from-blue-900 dark:via-sky-800 dark:to-sky-600">
             </div>
         </div>
         {{ $slot }}
@@ -43,7 +45,11 @@
         </button>
     </main>
 
-    <x-landing-page.components.footer :webProfile="$webProfile"/>
+    <x-landing-page.components.footer :webProfile="$webProfile" />
+
+    <script>
+        AOS.init();
+    </script>
 
     @stack('scripts')
 </body>

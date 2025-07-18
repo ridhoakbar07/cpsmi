@@ -1,4 +1,4 @@
-<x-landing-page.layouts.app :title="'Tentang Kami | PT. Inayah Bintang Borneo'">
+<x-landing-page.layouts.app :title="'Tentang Kami | PT. Inayah Bintang Borneo'" :webProfile="$webProfiles">
     <div
         class="container mx-auto my-12 px-4 py-8 max-w-5xl
         backdrop-blur-md
@@ -7,31 +7,15 @@
         text-gray-100 dark:text-gray-100">
         <h1 class="text-3xl font-bold mb-4 text-gray-100 dark:text-white text-center">Sejarah Perusahaan</h1>
         <p class="mb-4 text-gray-200 dark:text-gray-200 text-center">
-            PT Inayah Bintang Borneo merupakan perusahaan yang bergerak di bidang ekspedisi dan logistik, khususnya jasa
-            pengurusan transportasi (JPT/Freight Forwarding). Perusahaan ini didirikan pada tahun 2014 dengan nama awal
-            CV Bintang Borneo, kemudian berkembang menjadi PT Inayah Bintang Borneo pada tahun 2015.
-        </p>
-        <p class="mb-4 text-gray-200 dark:text-gray-200 text-center">
-            Sejak awal berdiri, PT Inayah Bintang Borneo telah melayani pengiriman barang mulai dari proses penjemputan,
-            penyimpanan, hingga pengantaran akhir. Fokus utamanya adalah layanan port to door dan door to door, dengan
-            prioritas pada pengiriman port to door sebagai vendor resmi dari perusahaan besar seperti PT Meratus dan PT
-            Spill untuk wilayah Kalimantan.
-        </p>
-        <p class="mb-4 text-gray-200 dark:text-gray-200 text-center">
-            Barang yang dikirim meliputi produk dari Hypermart, Nestle, Garuda Food, Santos, SGM, Pipa Rucika, United
-            Tractors, Kacang Dua Kelinci, American Standard, CSA, hingga perlengkapan pendidikan dari Dekasari. Volume
-            pengiriman rata-rata mencapai 15–20 kontainer per hari atau sekitar 500 kontainer per bulan.
-        </p>
-        <p class="mb-8 text-gray-200 dark:text-gray-200 text-center">
-            Dengan armada internal sebanyak 8 unit, perusahaan menjalin kerja sama dengan penyedia armada lainnya untuk
-            memenuhi kebutuhan operasional. PT Inayah Bintang Borneo berkomitmen mendukung kelancaran distribusi barang
-            para pelaku usaha secara efektif dan efisien di wilayah Kalimantan.
+            {!! strip_tags($webProfiles->sejarah, '<br><b><strong><i><em><ul><ol><li>') !!}
         </p>
 
         <h2 class="text-2xl font-semibold mb-4 text-gray-100 dark:text-white text-center">Struktur Organisasi</h2>
         <div class="flex justify-center mb-8">
-            <div class="rounded-xl overflow-hidden shadow-lg border border-gray-700 bg-gray-800/70 dark:bg-gray-800/80 transition-all hover:scale-105 hover:shadow-2xl duration-300 max-w-2xl w-full">
-                <img src="{{ asset('/storage/assets/struktur.jpg') }}" alt="Struktur Organisasi" class="w-full object-contain" loading="lazy" />
+            <div
+                class="rounded-xl overflow-hidden shadow-lg border border-gray-700 bg-gray-800/70 dark:bg-gray-800/80 transition-all hover:scale-105 hover:shadow-2xl duration-300 max-w-2xl w-full">
+                <img src="{{ asset('/storage/'.$webProfiles->struktur_organisasi) }}" alt="Struktur Organisasi"
+                    class="w-full object-contain" loading="lazy" />
             </div>
         </div>
 

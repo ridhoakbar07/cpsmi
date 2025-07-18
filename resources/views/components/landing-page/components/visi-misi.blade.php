@@ -16,7 +16,7 @@
             <!-- Main Content Grid -->
             <div class="grid lg:grid-cols-2 gap-8 mb-16">
                 <!-- Visi Card -->
-                <div>
+                <div data-aos="fade-right">
                     <div
                         class="relative h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/20 dark:border-gray-700/30 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                         <div class="flex items-center mb-6">
@@ -54,7 +54,7 @@
                 </div>
 
                 <!-- Misi Card -->
-                <div>
+                <div data-aos="fade-left">
                     <div
                         class="relative h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/20 dark:border-gray-700/30 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                         <!-- Icon -->
@@ -131,7 +131,7 @@
             </div>
 
             <!-- Values Section -->
-            <div
+            <div data-aos="zoom-in"
                 class="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl border border-white/20 dark:border-gray-700/30 rounded-3xl p-8 shadow-xl">
                 <div class="text-center mb-12">
                     <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Nilai-Nilai Perusahaan</h3>

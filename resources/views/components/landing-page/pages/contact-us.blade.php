@@ -1,4 +1,4 @@
-<x-landing-page.layouts.app :title="'Hubungi Kami | PT. Inayah Bintang Borneo'">
+<x-landing-page.layouts.app :title="'Hubungi Kami | PT. Inayah Bintang Borneo'" :webProfile="$webProfiles">
     <div class="flex flex-col items-center justify-center">
         <div class="container w-full mx-auto rounded-3xl overflow-hidden my-2">
             <div class="absolute inset-0 -z-10">

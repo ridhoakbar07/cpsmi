@@ -8,22 +8,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/contact-us', function () {
-    return view('components.landing-page.pages.contact-us');
-})->name('contact-us');
-
-Route::get('/activity', function () {
-    return view('components.landing-page.pages.activity');
-})->name('activity');
-
-Route::get('/about-us', function () {
-    return view('components.landing-page.pages.about-us');
-})->name('about-us');
-
-Route::get('/services', function () {
-    return view('components.landing-page.pages.services');
-})->name('services');
-
+Route::get('/about-us', [App\Http\Controllers\HomeController::class, 'aboutUs'])->name('about-us');
+Route::get('/contact-us', [App\Http\Controllers\HomeController::class, 'contactUs'])->name('contact-us');
+Route::get('/activity', [App\Http\Controllers\HomeController::class, 'activity'])->name('activity');
+Route::get('/services', [App\Http\Controllers\HomeController::class, 'services'])->name('services');
 Route::get('/blogs', [App\Http\Controllers\HomeController::class, 'blogs'])->name('blogs');
 
 // Route::middleware('web')

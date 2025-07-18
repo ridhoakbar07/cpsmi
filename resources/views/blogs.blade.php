@@ -1,4 +1,4 @@
-<x-landing-page.layouts.app :title="'Blogs | PT. Inayah Bintang Borneo'">
+<x-landing-page.layouts.app :title="'Blogs | PT. Inayah Bintang Borneo'" :webProfile="$webProfiles">
     <div class="container mx-auto max-w-6xl px-4 py-12">
         <div class="mb-12 text-center">
             <h1 class="text-4xl md:text-5xl font-extrabold text-blue-900 dark:text-white mb-3">Blog & Artikel</h1>

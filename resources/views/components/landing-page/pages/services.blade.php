@@ -1,4 +1,4 @@
-<x-landing-page.layouts.app :title="'Layanan | PT. Inayah Bintang Borneo'">
+<x-landing-page.layouts.app :title="'Layanan | PT. Inayah Bintang Borneo'" :webProfile="$webProfiles">
     <!-- Hero Background with Animated Gradient -->
     <div class="relative">
         <div class="relative container mx-auto px-4 py-16">
