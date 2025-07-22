@@ -83,17 +83,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/activity"
-                            class="text-gray-900 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 flex items-center group">
-                            <svg class="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform duration-200"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                                </path>
-                            </svg>
-                            Aktivitas
-                        </a>
-                    </li>
-                    <li>
                         <a href="/contact-us"
                             class="text-gray-900 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 flex items-center group">
                             <svg class="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform duration-200"

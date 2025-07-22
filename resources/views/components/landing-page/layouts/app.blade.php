@@ -11,6 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=687eeafdf106595c3bdb2c5c&product=sop' async='async'></script>
     <script>
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
@@ -25,7 +26,7 @@
 </head>
 
 <body class="bg-gray-100 text-gray-900 backdrop-blur-xs backdrop-sepia-30"
-    style="background-image: url('{{ asset('/storage/assets/background.jpg') }}'); background-size: cover; background-position: center; background-attachment: fixed;">
+    style="background-image: url('{{ asset('/storage/assets/background/default.jpg') }}'); background-size: cover; background-position: center; background-attachment: fixed;">
     <x-landing-page.components.navbar :webProfile="$webProfile" />
     <main class="container-fluid">
         <div class="pointer-events-none fixed inset-x-0 top-0 -z-10 overflow-hidden blur-3xl h-full" aria-hidden="true"

@@ -8,7 +8,7 @@
                     Visi & Misi
                 </h1>
                 <p class="text-xl text-gray-900 dark:text-gray-300 max-w-2xl mx-auto">
-                    Membangun masa depan logistik Indonesia dengan komitmen terhadap keunggulan dan inovasi
+                    Ekspedisi & Logistik Terkemuka, Cepat & Aman
                 </p>
                 <hr class="my-6 border-t-2 border-blue-200 dark:border-gray-700 w-full">
             </div>
@@ -39,10 +39,7 @@
                                 class="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-indigo-600 rounded-full">
                             </div>
                             <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
-                                menjadi perusahaan
-                                ekspedisi yang terkemuka sehingga dapat menghadapi persaingan pasar
-                                dengan mengutamakan kecepatan, keamanan, dan kepuasan pelanggan
-                                dalam pengiriman barang di seluruh Indonesia hingga Internasional
+                                {{ $webProfile->visi }}
                             </p>
                         </div>
 
@@ -77,47 +74,7 @@
                                     class="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full mt-3 mr-4 group-hover/item:scale-150 transition-transform duration-300">
                                 </div>
                                 <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                    Memberikan layanan pengiriman yang cepat dan tepat waktu
-                                </p>
-                            </div>
-                            <div class="flex items-start group/item">
-                                <div
-                                    class="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full mt-3 mr-4 group-hover/item:scale-150 transition-transform duration-300">
-                                </div>
-                                <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                    Menjaga Kualitas Pelayanan
-                                </p>
-                            </div>
-                            <div class="flex items-start group/item">
-                                <div
-                                    class="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full mt-3 mr-4 group-hover/item:scale-150 transition-transform duration-300">
-                                </div>
-                                <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                    Menjamin Keamanan Barang
-                                </p>
-                            </div>
-                            <div class="flex items-start group/item">
-                                <div
-                                    class="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full mt-3 mr-4 group-hover/item:scale-150 transition-transform duration-300">
-                                </div>
-                                <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                    Harga yang Kompetitif
-                                </p>
-                            </div>
-                            <div class="flex items-start group/item">
-                                <div
-                                    class="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full mt-3 mr-4 group-hover/item:scale-150 transition-transform duration-300">
-                                </div>
-                                <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                    Transparansi Informasi
-                                </p>
-                            </div>
-                            <div class="flex items-start group/item">
-                                <div
-                                    class="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full mt-3 mr-4 group-hover/item:scale-150 transition-transform duration-300">
-                                </div>
-                                <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                    Pengoptimalan Kualitas Perusahaan
+                                    {!! tiptap_converter()->asHTML($webProfile->misi, toc: true, maxDepth: 3) !!}
                                 </p>
                             </div>
                         </div>
@@ -129,13 +86,13 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Values Section -->
+             <!-- Values Section -->
             <div data-aos="zoom-in"
                 class="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl border border-white/20 dark:border-gray-700/30 rounded-3xl p-8 shadow-xl">
                 <div class="text-center mb-12">
                     <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Nilai-Nilai Perusahaan</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-lg">Fondasi yang memandu setiap langkah perjalanan
+                    <p class="text-gray-600 dark:text-gray-300 text-lg">Fondasi yang memandu setiap langkah
+                        perjalanan
                         kami</p>
                 </div>
 
@@ -144,7 +101,7 @@
                     <div
                         class="flex flex-col items-center group text-center my-2 hover:animate-pulse transition-all duration-300">
                         <div
-                        class="p-[2px] rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 border-2 border-transparent bg-clip-border mb-2">
+                            class="p-[2px] rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 border-2 border-transparent bg-clip-border mb-2">
                             <div
                                 class="w-16 h-16 bg-gray-700 text-blue-200 dark:bg-blue-300 dark:text-gray-900 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -161,7 +118,7 @@
                     <div
                         class="flex flex-col items-center group text-center my-2 hover:animate-pulse transition-all duration-300">
                         <div
-                        class="p-[2px] rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 border-2 border-transparent bg-clip-border mb-2">
+                            class="p-[2px] rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 border-2 border-transparent bg-clip-border mb-2">
                             <div
                                 class="w-16 h-16 bg-gray-700 text-blue-200 dark:bg-blue-300 dark:text-gray-900 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -178,7 +135,7 @@
                     <div
                         class="flex flex-col items-center group text-center my-2 hover:animate-pulse transition-all duration-300">
                         <div
-                        class="p-[2px] rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 border-2 border-transparent bg-clip-border mb-2">
+                            class="p-[2px] rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 border-2 border-transparent bg-clip-border mb-2">
                             <div
                                 class="w-16 h-16 bg-gray-700 text-blue-200 dark:bg-blue-300 dark:text-gray-900 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -195,7 +152,7 @@
                     <div
                         class="flex flex-col items-center group text-center my-2 hover:animate-pulse transition-all duration-300">
                         <div
-                        class="p-[2px] rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 border-2 border-transparent bg-clip-border mb-2">
+                            class="p-[2px] rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 border-2 border-transparent bg-clip-border mb-2">
                             <div
                                 class="w-16 h-16 bg-gray-700 text-blue-200 dark:bg-blue-300 dark:text-gray-900 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -212,7 +169,7 @@
                     <div
                         class="flex flex-col items-center group text-center my-2 hover:animate-pulse transition-all duration-300">
                         <div
-                        class="p-[2px] rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 border-2 border-transparent bg-clip-border mb-2">
+                            class="p-[2px] rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 border-2 border-transparent bg-clip-border mb-2">
                             <div
                                 class="w-16 h-16 bg-gray-700 text-blue-200 dark:bg-blue-300 dark:text-gray-900 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -229,7 +186,7 @@
                     <div
                         class="flex flex-col items-center group text-center my-2 hover:animate-pulse transition-all duration-300">
                         <div
-                        class="p-[2px] rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 border-2 border-transparent bg-clip-border mb-2">
+                            class="p-[2px] rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 border-2 border-transparent bg-clip-border mb-2">
                             <div
                                 class="w-16 h-16 bg-gray-700 text-blue-200 dark:bg-blue-300 dark:text-gray-900 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"

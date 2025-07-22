@@ -32,16 +32,12 @@
                         class="block py-2 text-gray-900 dark:text-blue-100 tracking-tight hover:animate-[pulse_1s_ease-in-out] hover:font-bold hover:text-blue-900 dark:hover:text-blue-200 transition delay-100 duration-100 ease-in-out hover:scale-110">Layanan</a>
                 </li>
                 <li>
-                    <a href="{{ route('blogs') }}"
+                    <a href="{{ route('blog.post.index') }}"
                         class="block py-2 text-gray-900 dark:text-blue-100 tracking-tight hover:animate-[pulse_1s_ease-in-out] hover:font-bold hover:text-blue-900 dark:hover:text-blue-200 transition delay-100 duration-100 ease-in-out hover:scale-110">Blogs</a>
                 </li>
                 <li>
-                    <a href="{{ route('activity') }}"
-                        class="block py-2 text-gray-900 dark:text-blue-100 tracking-tight hover:animate-[pulse_1s_ease-in-out] hover:font-bold hover:text-blue-900 dark:hover:text-blue-200 transition delay-100 duration-100 ease-in-out hover:scale-110">Aktivitas</a>
-                </li>
-                <li>
                     <a href="{{ route('contact-us') }}"
-                        class="block py-2 text-gray-900 dark:text-blue-100 tracking-tight hover:animate-[pulse_1s_ease-in-out] hover:font-bold hover:text-blue-900 dark:hover:text-blue-200 transition delay-100 duration-100 ease-in-out hover:scale-110">Contact</a>
+                        class="block py-2 text-gray-900 dark:text-blue-100 tracking-tight hover:animate-[pulse_1s_ease-in-out] hover:font-bold hover:text-blue-900 dark:hover:text-blue-200 transition delay-100 duration-100 ease-in-out hover:scale-110">Kontak Kami</a>
                 </li>
             </ul>
         </div>
@@ -100,7 +96,7 @@
                                 </li>
                             </ul>
                             <div class="border-t border-gray-200 dark:border-gray-700">
-                                <form method="POST" action="">
+                                <form method="POST" action="{{ route('filament.admin.auth.logout') }}">
                                     @csrf
                                     <button type="submit"
                                         class="w-full flex items-center px-4 py-2 text-left text-gray-900 dark:text-blue-100 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-900 dark:hover:text-blue-200 transition duration-300 ease-in-out">
@@ -167,17 +163,6 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('activity') }}"
-                class="flex items-center gap-2 block py-2 text-gray-900 dark:text-blue-100 hover:font-bold hover:text-blue-900 dark:hover:text-blue-200">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
-                </svg>
-                Aktivitas
-            </a>
-        </li>
-        <li>
             <a href="{{ route('contact-us') }}"
                 class="flex items-center gap-2 block py-2 text-gray-900 dark:text-blue-100 hover:font-bold hover:text-blue-900 dark:hover:text-blue-200">
                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -186,7 +171,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-18 8V8a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
                 </svg>
-                Contact
+                Kontak Kami
             </a>
         </li>
         @auth

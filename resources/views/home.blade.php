@@ -8,7 +8,7 @@
         <div class="container w-auto mx-auto rounded-3xl relative overflow-hidden">
 
             {{-- Feature Section --}}
-            <x-landing-page.components.visi-misi />
+            <x-landing-page.components.visi-misi :webProfile="$webProfiles"/>
 
             {{-- Service Section --}}
             <x-landing-page.components.pricing />
@@ -19,5 +19,5 @@
     </div>
 
     {{-- Blog Section --}}
-    <x-landing-page.components.artikel :posts="$posts" />
+    <x-landing-page.components.blogs.card :posts="$posts"/>
 </x-landing-page.layouts.app>
