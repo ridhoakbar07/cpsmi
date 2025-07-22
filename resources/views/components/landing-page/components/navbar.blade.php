@@ -11,7 +11,7 @@
             <img id="navbar-logo-img" src="{{ asset('/storage/' . $webProfile->logo) }}"
                 class="mr-3 h-6 sm:h-9 hidden md:inline" alt="Logo PT" />
             <span id="navbar-logo-text"
-                class="self-center text-pretty text-md text-pretty lg:text-xl font-semibold whitespace-nowrap">{{$webProfile->nama_perusahaan}}</span>
+                class="self-center text-pretty text-md text-pretty lg:text-xl font-semibold whitespace-nowrap">{{ $webProfile->nama_perusahaan }}</span>
         </a>
 
         <!-- Menu Desktop -->
@@ -33,11 +33,12 @@
                 </li>
                 <li>
                     <a href="{{ route('blog.post.index') }}"
-                        class="block py-2 text-gray-900 dark:text-blue-100 tracking-tight hover:animate-[pulse_1s_ease-in-out] hover:font-bold hover:text-blue-900 dark:hover:text-blue-200 transition delay-100 duration-100 ease-in-out hover:scale-110">Blogs</a>
+                        class="block py-2 text-gray-900 dark:text-blue-100 tracking-tight hover:animate-[pulse_1s_ease-in-out] hover:font-bold hover:text-blue-900 dark:hover:text-blue-200 transition delay-100 duration-100 ease-in-out hover:scale-110">Aktivitas</a>
                 </li>
                 <li>
                     <a href="{{ route('contact-us') }}"
-                        class="block py-2 text-gray-900 dark:text-blue-100 tracking-tight hover:animate-[pulse_1s_ease-in-out] hover:font-bold hover:text-blue-900 dark:hover:text-blue-200 transition delay-100 duration-100 ease-in-out hover:scale-110">Kontak Kami</a>
+                        class="block py-2 text-gray-900 dark:text-blue-100 tracking-tight hover:animate-[pulse_1s_ease-in-out] hover:font-bold hover:text-blue-900 dark:hover:text-blue-200 transition delay-100 duration-100 ease-in-out hover:scale-110">Kontak
+                        Kami</a>
                 </li>
             </ul>
         </div>
@@ -152,6 +153,17 @@
             </a>
         </li>
         <li>
+            <a href="{{ route('about-us') }}"
+                class="flex items-center gap-2 block py-2 text-gray-900 dark:text-blue-100 hover:font-bold hover:text-blue-900 dark:hover:text-blue-200">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
+                </svg>
+                Tentang Kami
+            </a>
+        </li>
+        <li>
             <a href="{{ route('services') }}"
                 class="flex items-center gap-2 block py-2 text-gray-900 dark:text-blue-100 hover:font-bold hover:text-blue-900 dark:hover:text-blue-200">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -160,6 +172,15 @@
                         d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
                 </svg>
                 Layanan
+            </a>
+        </li>
+        <li>
+            <a href="{{ route('blog.post.index') }}" <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+                </svg>
+                Aktivitas
             </a>
         </li>
         <li>
@@ -226,7 +247,7 @@
         const navbar = document.getElementById('main-navbar');
         const logoImg = document.getElementById('navbar-logo-img');
         const logoText = document.getElementById('navbar-logo-text');
-        window.addEventListener('scroll', function () {
+        window.addEventListener('scroll', function() {
             if (window.scrollY > 10) {
                 navbar.classList.add('shadow-lg', 'bg-white/90', 'backdrop-blur', 'dark:bg-gray-900/90');
                 if (logoImg) logoImg.classList.add('hidden');
@@ -263,7 +284,7 @@
 
         updateThemeIcons();
 
-        themeToggle.addEventListener('click', function () {
+        themeToggle.addEventListener('click', function() {
             document.documentElement.classList.toggle('dark');
             if (document.documentElement.classList.contains('dark')) {
                 localStorage.setItem('theme', 'dark');
@@ -277,19 +298,19 @@
         const mobileMenu = document.getElementById('mobile-menu');
         const closeMobileMenu = document.getElementById('close-mobile-menu');
 
-        hamburgerBtn.addEventListener('click', function () {
+        hamburgerBtn.addEventListener('click', function() {
             mobileMenu.classList.remove('-translate-x-full');
             mobileMenu.classList.add('translate-x-0');
             navbar.classList.add('hidden');
         });
 
-        closeMobileMenu.addEventListener('click', function () {
+        closeMobileMenu.addEventListener('click', function() {
             mobileMenu.classList.add('-translate-x-full');
             mobileMenu.classList.remove('translate-x-0');
             navbar.classList.remove('hidden');
         });
 
-        document.addEventListener('click', function (e) {
+        document.addEventListener('click', function(e) {
             if (!mobileMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
                 mobileMenu.classList.add('-translate-x-full');
                 mobileMenu.classList.remove('translate-x-0');

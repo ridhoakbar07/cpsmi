@@ -11,7 +11,6 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('/about-us', [App\Http\Controllers\HomeController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact-us', [App\Http\Controllers\HomeController::class, 'contactUs'])->name('contact-us');
 Route::get('/services', [App\Http\Controllers\HomeController::class, 'services'])->name('services');
-// Hapus route /blogs dari HomeController agar tidak bentrok dengan grup route blogs milik PostController
 
 Route::middleware('web')
     ->prefix('blogs')
