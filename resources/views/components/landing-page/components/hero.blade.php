@@ -20,18 +20,73 @@
             </div>
         </div>
         <div class="flex items-center justify-center mb-8 lg:mb-0 w-full lg:w-1/2">
-            <iframe width="100%" height="315" class="max-w-[480px] rounded-xl shadow-lg"
-                src="https://www.youtube.com/embed/V1LK1IyYqDc?si=x_nJNDnASBOcWTRu" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div id="media-carousel"
+                class="relative max-w-[480px] w-full h-[315px] rounded-xl shadow-lg overflow-hidden">
+                <!-- Slides -->
+                <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-500 opacity-100"
+                    style="display: block;">
+                    <video width="100%" height="315" class="w-full h-full object-cover" controls>
+                        <source src="{{ asset('/storage/assets/banner/video.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-500 opacity-0"
+                    style="display: none;">
+                    <img src="{{ asset('/storage/assets/banner/foto1.jpeg') }}" alt="Foto 1"
+                        class="w-full h-full object-cover" />
+                </div>
+                <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-500 opacity-0"
+                    style="display: none;">
+                    <img src="{{ asset('/storage/assets/banner/foto2.jpeg') }}" alt="Foto 2"
+                        class="w-full h-full object-cover" />
+                </div>
+                <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-500 opacity-0"
+                    style="display: none;">
+                    <img src="{{ asset('/storage/assets/banner/foto3.jpeg') }}" alt="Foto 3"
+                        class="w-full h-full object-cover" />
+                </div>
+                <!-- Controls -->
+                <button type="button" id="carousel-prev"
+                    class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 rounded-full p-2 shadow hover:bg-white z-10">
+                    &#8592;
+                </button>
+                <button type="button" id="carousel-next"
+                    class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 rounded-full p-2 shadow hover:bg-white z-10">
+                    &#8594;
+                </button>
+            </div>
         </div>
     </div>
 </div>
 
 @push('scripts')
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
+            // Carousel logic only
+            const slides = document.querySelectorAll('#media-carousel .carousel-slide');
+            let current = 0;
+
+            function showSlide(idx) {
+                slides.forEach((slide, i) => {
+                    slide.style.display = i === idx ? 'block' : 'none';
+                    slide.style.opacity = i === idx ? '1' : '0';
+                });
+            }
+
+            document.getElementById('carousel-prev').onclick = function () {
+                current = (current - 1 + slides.length) % slides.length;
+                showSlide(current);
+            };
+            document.getElementById('carousel-next').onclick = function () {
+                current = (current + 1) % slides.length;
+                showSlide(current);
+            };
+
+            showSlide(current);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
             const text = "Menuju Ekspedisi Terkemuka, Cepat & Aman";
             const typedText = document.getElementById('typed-text');
             let i = 0;
