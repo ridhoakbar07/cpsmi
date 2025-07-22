@@ -25,7 +25,7 @@
                 <!-- Slides -->
                 <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-500 opacity-100"
                     style="display: block;">
-                    <video width="100%" height="315" class="w-full h-full object-cover" controls>
+                    <video width="100%" height="315" class="w-full h-full object-cover" autoplay muted>
                         <source src="{{ asset('/storage/assets/banner/video.mp4') }}" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
