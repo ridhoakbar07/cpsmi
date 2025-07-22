@@ -87,4 +87,34 @@ class HomeController extends Controller
         $webProfiles = $this->getWebProfiles();
         return view('components.landing-page.pages.services', ['webProfiles' => $webProfiles]);
     }
+
+    public function sendContact(Request $request)
+    {
+        $validated = $request->validate([
+            'first-name' => 'required|string|max:50',
+            'last-name' => 'required|string|max:50',
+            'company' => 'nullable|string|max:100',
+            'email' => 'required|email',
+            'country' => 'required|string|max:5',
+            'phone-number' => 'required|string|max:20',
+            'message' => 'required|string|max:1000',
+        ]);
+
+        $adminEmail = 'info@inayahbintangborneo.com';
+
+        \Mail::send([], [], function ($message) use ($validated, $adminEmail) {
+            $message->to($adminEmail)
+                ->subject('Pesan Kontak dari Website')
+                ->setBody(
+                    'Nama: ' . $validated['first-name'] . ' ' . $validated['last-name'] . "<br>" .
+                    'Perusahaan: ' . ($validated['company'] ?? '-') . "<br>" .
+                    'Email: ' . $validated['email'] . "<br>" .
+                    'Telepon: ' . $validated['country'] . ' ' . $validated['phone-number'] . "<br>" .
+                    'Pesan: <br>' . nl2br($validated['message']),
+                    'text/html'
+                );
+        });
+
+        return redirect()->back()->with('success', 'Pesan Anda berhasil dikirim!');
+    }
 }

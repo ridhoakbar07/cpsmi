@@ -138,7 +138,8 @@
                                 style="background:rgba(255,255,255,0.25);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.18);">
                             </div>
                             <div class="relative z-10 p-8 h-full flex flex-col">
-                                <form action="#" method="POST" class="space-y-6 flex-1">
+                                <form action="{{ route('contact.send') }}" method="POST" class="space-y-6 flex-1">
+                                    @csrf
                                     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                                         <div>
                                             <label for="first-name"

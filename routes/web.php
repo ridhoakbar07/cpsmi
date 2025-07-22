@@ -10,6 +10,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::get('/about-us', [App\Http\Controllers\HomeController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact-us', [App\Http\Controllers\HomeController::class, 'contactUs'])->name('contact-us');
+Route::post('/contact/send', [App\Http\Controllers\HomeController::class, 'sendContact'])->name('contact.send');
 Route::get('/services', [App\Http\Controllers\HomeController::class, 'services'])->name('services');
 
 Route::middleware('web')
